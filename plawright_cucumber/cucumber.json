@@ -1,14 +1,13 @@
 {
     "default": {
-        "formationOptions": {
-            "snippetInterface": "async-await"
-        },
-        "paths": [
-            "src\\test\\features/"
-        ],
-        
-        "dryRun": true,
-        "import": ["src\\test\\steps"]
-       
+      "formationOptions": {
+        "snippetInterface": "async-await"
+      },
+      "paths": [
+        "src/test/features/"   
+      ],
+      "dryRun": false,          
+      "import": ["src/test/steps"] 
     }
-}
+  }
+  
