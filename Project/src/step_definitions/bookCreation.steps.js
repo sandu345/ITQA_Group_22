@@ -1,100 +1,85 @@
-const cucumber = require('@cucumber/cucumber');
+const { Given, When, Then } = require('@cucumber/cucumber');
 const axios = require('axios');
-const chai = require('chai');
+const { expect } = require('chai');
+const fs = require('fs');
+const path = require('path');
 
-const Given = cucumber.Given;
-const When = cucumber.When;
-const Then = cucumber.Then;
-const expect = chai.expect;
-
-// Shared variables
 let response;
 let bookData;
 let headers;
 
-// Function to create auth header
-const createAuthHeader = (username, password) => {
-    const auth = Buffer.from(`${username}:${password}`).toString('base64');
-    return `Basic ${auth}`;
+// Logger function
+const logToFile = (description, data) => {
+    const logDir = path.join(__dirname, '../logs');
+    fs.mkdirSync(logDir, { recursive: true });
+    const logPath = path.join(logDir, `${description.replace(/ /g, '_')}.json`);
+    fs.writeFileSync(logPath, JSON.stringify(data, null, 2));
 };
 
-// Function to create request headers
-const createHeaders = (username, password) => ({
-    'Authorization': createAuthHeader(username, password),
-    'Content-Type': 'application/json'
-});
-
-Given('I have valid book data', function() {
-    headers = createHeaders('admin', 'password');
-    bookData = {
-        title: 'The Great Gatsby',
-        author: 'F. Scott Fitzgerald'
+Given('I have valid book data', function () {
+    headers = {
+        'Authorization': 'Basic ' + Buffer.from('admin:password').toString('base64'),
+        'Content-Type': 'application/json'
     };
-});
-
-Given('I have invalid book data without title', function() {
-    headers = createHeaders('admin', 'password');
     bookData = {
-        author: 'F. Scott Fitzgerald'
+        title: `Test Book ${Date.now()}`,
+        author: 'Test Author'
     };
+    logToFile('valid_request', bookData);
 });
 
-Given('I have invalid book data without author', function() {
-    headers = createHeaders('admin', 'password');
+Given('I have invalid book data without title', function () {
+    headers = {
+        'Authorization': 'Basic ' + Buffer.from('admin:password').toString('base64'),
+        'Content-Type': 'application/json'
+    };
+    bookData = { author: 'Test Author' };
+    logToFile('invalid_request_no_title', bookData);
+});
+
+Given('I have invalid book data without author', function () {
+    headers = {
+        'Authorization': 'Basic ' + Buffer.from('admin:password').toString('base64'),
+        'Content-Type': 'application/json'
+    };
+    bookData = { title: `Test Book ${Date.now()}` };
+    logToFile('invalid_request_no_author', bookData);
+});
+
+Given('I have invalid book data without title and author', function () {
+    headers = {
+        'Authorization': 'Basic ' + Buffer.from('admin:password').toString('base64'),
+        'Content-Type': 'application/json'
+    };
+    bookData = {};
+    logToFile('invalid_request_no_fields', bookData);
+});
+
+Given('I have valid book data but invalid credentials', function () {
+    headers = {
+        'Authorization': 'Basic ' + Buffer.from('invalid:wrong').toString('base64'),
+        'Content-Type': 'application/json'
+    };
     bookData = {
-        title: 'The Great Gatsby'
+        title: `Test Book ${Date.now()}`,
+        author: 'Test Author'
     };
+    logToFile('invalid_credentials', bookData);
 });
 
-Given('I have valid book data but invalid credentials', function() {
-    headers = createHeaders('admin', 'wrongpassword');
-    bookData = {
-        title: 'The Great Gatsby',
-        author: 'F. Scott Fitzgerald'
-    };
-});
-
-When('I send a POST request to {string} with the valid data', async function(url) {
+When('I send a POST request to {string} with the {word} data', async function (url, dataType) {
     try {
-        response = await axios.post(`http://localhost:7081${url}`, bookData, { 
+        response = await axios.post(`http://localhost:7081${url}`, bookData, {
             headers,
-            validateStatus: function (status) {
-                return status < 500; // Resolve only if the status code is less than 500
-            }
+            validateStatus: () => true
         });
+        logToFile('response', { status: response.status, data: response.data });
     } catch (error) {
-        console.error('Request failed:', error.message);
-        response = error.response || {
-            status: 500,
-            data: 'Internal Server Error'
-        };
+        response = error.response || { status: 500, data: 'Internal Server Error' };
+        logToFile('error', { error: error.message, response });
     }
 });
 
-When('I send a POST request to {string} with the invalid data', async function(url) {
-    try {
-        response = await axios.post(`http://localhost:7081${url}`, bookData, { 
-            headers,
-            validateStatus: function (status) {
-                return status < 500;
-            }
-        });
-    } catch (error) {
-        console.error('Request failed:', error.message);
-        response = error.response || {
-            status: 500,
-            data: 'Internal Server Error'
-        };
-    }
-});
-
-Then('I should get a status code of {int}', function(statusCode) {
-    if (response.status !== statusCode) {
-        console.log('Expected status:', statusCode);
-        console.log('Actual response:', {
-            status: response.status,
-            data: response.data
-        });
-    }
-    expect(response.status).to.equal(statusCode);
+Then('I should get a status code of {int}', function (expectedStatus) {
+    expect(response.status).to.equal(expectedStatus);
 });

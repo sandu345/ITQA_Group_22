@@ -15,7 +15,13 @@ Feature: Book API Testing
     When I send a POST request to "/api/books" with the invalid data
     Then I should get a status code of 400
 
+  Scenario: Create a book with both title and author missing
+    Given I have invalid book data without title and author
+    When I send a POST request to "/api/books" with the invalid data
+    Then I should get a status code of 400
+
   Scenario: Create a book with unauthorized user
     Given I have valid book data but invalid credentials
     When I send a POST request to "/api/books" with the valid data
     Then I should get a status code of 401
+

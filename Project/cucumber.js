@@ -1,8 +1,7 @@
 module.exports = {
    default: {
-       requireModule: [],
-       require: ['src/step_definitions/*.js'],
        paths: ['src/features/'],
-       format: ['progress']
+       require: ['src/step_definitions/*.js'],
+       format: ['html:cucumber-report.html', 'summary']
    }
 };

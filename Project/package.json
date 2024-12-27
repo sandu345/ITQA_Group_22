@@ -4,17 +4,26 @@
    "main": "index.js",
    "type": "commonjs",
    "scripts": {
-      "test": "cucumber-js --config cucumber.js",
-      "test:report": "allure generate allure-results --clean -o allure-report && allure open allure-report"
-   },
+      "pretest": "rm -rf logs && mkdir -p logs",
+      "test": "cucumber-js --format html:reports/cucumber-report.html --format @cucumber/pretty-formatter",
+      "test:report": "npm run pretest && npm test && xdg-open reports/cucumber-report.html || open reports/cucumber-report.html"
+    },
    "devDependencies": {
       "@babel/core": "^7.26.0",
       "@babel/preset-env": "^7.26.0",
       "@babel/register": "^7.25.9",
       "@cucumber/cucumber": "^11.1.1",
+      "@cucumber/html-formatter": "^21.7.0",
+      "@cucumber/pretty-formatter": "^1.0.0",
+      "@playwright/test": "^1.49.1",
       "allure-commandline": "^2.32.0",
+      "allure-cucumberjs": "^3.0.7",
+      "allure-playwright": "^3.0.7",
       "axios": "^1.7.9",
       "chai": "^4.3.7",
       "playwright": "^1.49.1"
+   },
+   "dependencies": {
+      "allure-js-commons": "^3.0.7"
    }
-}
+}  
