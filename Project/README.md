@@ -1,7 +1,7 @@
 # Project
 
 ## Description
-This project contains automated tests for the Book API using Cucumber,PlayWright, Axios, and Chai.
+This project contains automated tests for the Book API using Cucumber, PlayWright, Axios, and Chai.
 
 ## Prerequisites
 - Node.js (v14 or higher)
