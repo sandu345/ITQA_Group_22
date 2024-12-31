@@ -14,12 +14,18 @@
             "keyword": "Given ",
             "line": 4,
             "name": "I have valid book data",
+<<<<<<< HEAD
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:20"
             },
             "result": {
               "status": "passed",
               "duration": 2876199
+=======
+            "result": {
+              "status": "undefined",
+              "duration": 0
+>>>>>>> 08aa95842e2ef320194aeb2eaabcbcd62b80ae59
             }
           },
           {
@@ -27,12 +33,18 @@
             "keyword": "When ",
             "line": 5,
             "name": "I send a POST request to \"/api/books\" with the valid data",
+<<<<<<< HEAD
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:71"
             },
             "result": {
               "status": "passed",
               "duration": 251037000
+=======
+            "result": {
+              "status": "undefined",
+              "duration": 0
+>>>>>>> 08aa95842e2ef320194aeb2eaabcbcd62b80ae59
             }
           },
           {
@@ -40,6 +52,7 @@
             "keyword": "Then ",
             "line": 6,
             "name": "I should get a status code of 201",
+<<<<<<< HEAD
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:84"
             },
@@ -514,6 +527,11 @@
             "result": {
               "status": "passed",
               "duration": 329900
+=======
+            "result": {
+              "status": "undefined",
+              "duration": 0
+>>>>>>> 08aa95842e2ef320194aeb2eaabcbcd62b80ae59
             }
           }
         ],
@@ -526,6 +544,10 @@
     "keyword": "Feature",
     "name": "Book API Testing",
     "tags": [],
+<<<<<<< HEAD
     "uri": "src\\features\\bookCreation.feature"
+=======
+    "uri": "src/features/bookCreation.feature"
+>>>>>>> 08aa95842e2ef320194aeb2eaabcbcd62b80ae59
   }
 ]
