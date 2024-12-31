@@ -4,4 +4,4 @@ module.exports = {
        require: ['src/step_definitions/*.js'],
        format: ['html:cucumber-report.html', 'summary']
    }
-};
+}; 
