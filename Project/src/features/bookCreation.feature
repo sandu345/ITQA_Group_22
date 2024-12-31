@@ -25,8 +25,6 @@ Feature: Book API Testing
     When I send a POST request to "/api/books" with the valid data
     Then I should get a status code of 401
 
-<<<<<<< HEAD
-
 # New PUT scenarios
   Scenario: Update a book with valid data
     Given I have an existing book
@@ -53,5 +51,3 @@ Feature: Book API Testing
     And I have invalid credentials
     When I try to update the book
     Then I should get a status code of 401
-=======
->>>>>>> 08aa95842e2ef320194aeb2eaabcbcd62b80ae59

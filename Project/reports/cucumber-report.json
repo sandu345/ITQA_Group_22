@@ -14,18 +14,12 @@
             "keyword": "Given ",
             "line": 4,
             "name": "I have valid book data",
-<<<<<<< HEAD
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 2876199
-=======
-            "result": {
-              "status": "undefined",
-              "duration": 0
->>>>>>> 08aa95842e2ef320194aeb2eaabcbcd62b80ae59
+              "duration": 6934899
             }
           },
           {
@@ -33,18 +27,12 @@
             "keyword": "When ",
             "line": 5,
             "name": "I send a POST request to \"/api/books\" with the valid data",
-<<<<<<< HEAD
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:71"
             },
             "result": {
               "status": "passed",
-              "duration": 251037000
-=======
-            "result": {
-              "status": "undefined",
-              "duration": 0
->>>>>>> 08aa95842e2ef320194aeb2eaabcbcd62b80ae59
+              "duration": 1475672700
             }
           },
           {
@@ -52,13 +40,12 @@
             "keyword": "Then ",
             "line": 6,
             "name": "I should get a status code of 201",
-<<<<<<< HEAD
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:84"
             },
             "result": {
               "status": "passed",
-              "duration": 1132699
+              "duration": 2172399
             }
           }
         ],
@@ -82,7 +69,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1104199
+              "duration": 2842099
             }
           },
           {
@@ -95,7 +82,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 140367500
+              "duration": 301631000
             }
           },
           {
@@ -108,7 +95,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1420899,
+              "duration": 3578099,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
             }
           }
@@ -133,7 +120,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1062300
+              "duration": 1990800
             }
           },
           {
@@ -146,7 +133,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 157535599
+              "duration": 227103900
             }
           },
           {
@@ -159,7 +146,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 588600,
+              "duration": 1218299,
               "error_message": "AssertionError\n    + expected - actual\n\n    -201\n    +400\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
             }
           }
@@ -184,7 +171,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1397600
+              "duration": 2331900
             }
           },
           {
@@ -197,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 145282999
+              "duration": 261334999
             }
           },
           {
@@ -210,7 +197,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 668899,
+              "duration": 907000,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
             }
           }
@@ -235,7 +222,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1461700
+              "duration": 3018399
             }
           },
           {
@@ -248,7 +235,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 185105800
+              "duration": 253558500
             }
           },
           {
@@ -261,7 +248,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 376199
+              "duration": 421999
             }
           }
         ],
@@ -272,46 +259,46 @@
         "description": "",
         "id": "book-api-testing;update-a-book-with-valid-data",
         "keyword": "Scenario",
-        "line": 30,
+        "line": 29,
         "name": "Update a book with valid data",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 31,
+            "line": 30,
             "name": "I have an existing book",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:96"
             },
             "result": {
               "status": "passed",
-              "duration": 165319799
+              "duration": 251931599
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 32,
+            "line": 31,
             "name": "I update the book with new valid data",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:120"
             },
             "result": {
               "status": "passed",
-              "duration": 223750500
+              "duration": 272709899
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 33,
+            "line": 32,
             "name": "I should get a status code of 200",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:84"
             },
             "result": {
               "status": "failed",
-              "duration": 390899,
+              "duration": 696399,
               "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +200\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
             }
           }
@@ -323,46 +310,46 @@
         "description": "",
         "id": "book-api-testing;update-a-non-existing-book",
         "keyword": "Scenario",
-        "line": 35,
+        "line": 34,
         "name": "Update a non-existing book",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 36,
+            "line": 35,
             "name": "I have an invalid book ID",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:138"
             },
             "result": {
               "status": "passed",
-              "duration": 286599
+              "duration": 550899
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 37,
+            "line": 36,
             "name": "I try to update the non-existing book",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:146"
             },
             "result": {
               "status": "passed",
-              "duration": 177388300
+              "duration": 274446700
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 38,
+            "line": 37,
             "name": "I should get a status code of 404",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:84"
             },
             "result": {
               "status": "failed",
-              "duration": 633199,
+              "duration": 868599,
               "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +404\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
             }
           }
@@ -374,46 +361,46 @@
         "description": "",
         "id": "book-api-testing;update-a-book-with-missing-title",
         "keyword": "Scenario",
-        "line": 40,
+        "line": 39,
         "name": "Update a book with missing title",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 41,
+            "line": 40,
             "name": "I have an existing book",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:96"
             },
             "result": {
               "status": "passed",
-              "duration": 205614600
+              "duration": 345040399
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 42,
+            "line": 41,
             "name": "I update the book without title",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:164"
             },
             "result": {
               "status": "passed",
-              "duration": 193005599
+              "duration": 247563200
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 43,
+            "line": 42,
             "name": "I should get a status code of 400",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:84"
             },
             "result": {
               "status": "passed",
-              "duration": 341300
+              "duration": 419699
             }
           }
         ],
@@ -424,46 +411,46 @@
         "description": "",
         "id": "book-api-testing;update-a-book-with-missing-author",
         "keyword": "Scenario",
-        "line": 45,
+        "line": 44,
         "name": "Update a book with missing author",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 46,
+            "line": 45,
             "name": "I have an existing book",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:96"
             },
             "result": {
               "status": "passed",
-              "duration": 153130299
+              "duration": 255904700
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 47,
+            "line": 46,
             "name": "I update the book without author",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:181"
             },
             "result": {
               "status": "passed",
-              "duration": 159460600
+              "duration": 265470400
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 48,
+            "line": 47,
             "name": "I should get a status code of 400",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:84"
             },
             "result": {
               "status": "passed",
-              "duration": 450000
+              "duration": 322199
             }
           }
         ],
@@ -474,64 +461,59 @@
         "description": "",
         "id": "book-api-testing;update-a-book-with-unauthorized-user",
         "keyword": "Scenario",
-        "line": 50,
+        "line": 49,
         "name": "Update a book with unauthorized user",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 51,
+            "line": 50,
             "name": "I have an existing book",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:96"
             },
             "result": {
               "status": "passed",
-              "duration": 198414099
+              "duration": 240534800
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 52,
+            "line": 51,
             "name": "I have invalid credentials",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:198"
             },
             "result": {
               "status": "passed",
-              "duration": 415000
+              "duration": 595099
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 53,
+            "line": 52,
             "name": "I try to update the book",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:205"
             },
             "result": {
               "status": "passed",
-              "duration": 126149499
+              "duration": 222748700
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 54,
+            "line": 53,
             "name": "I should get a status code of 401",
             "match": {
               "location": "src\\step_definitions\\bookCreation.steps.js:84"
             },
             "result": {
               "status": "passed",
-              "duration": 329900
-=======
-            "result": {
-              "status": "undefined",
-              "duration": 0
->>>>>>> 08aa95842e2ef320194aeb2eaabcbcd62b80ae59
+              "duration": 295700
             }
           }
         ],
@@ -544,10 +526,6 @@
     "keyword": "Feature",
     "name": "Book API Testing",
     "tags": [],
-<<<<<<< HEAD
     "uri": "src\\features\\bookCreation.feature"
-=======
-    "uri": "src/features/bookCreation.feature"
->>>>>>> 08aa95842e2ef320194aeb2eaabcbcd62b80ae59
   }
 ]
