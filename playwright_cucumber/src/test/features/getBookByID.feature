@@ -3,10 +3,6 @@ Feature: Get Book by ID API
   I want to retrieve book information by ID
   So that I can view specific book details
 
-  Background:
-    Given a test book exists in the system
-      | id    | title     | author       |
-      | 1     | The Forgotten Realm | Lou Kerner |
 
   Scenario: Successfully retrieve a book with valid ID
     Given I am authenticated as "admin"
