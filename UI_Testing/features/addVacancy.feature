@@ -1,4 +1,4 @@
-Feature: Add Vacacy 
+Feature: Add Vacancy 
   As an admin user
   I want to add a new vacancy
   So that I can create a new job vacancy
@@ -11,6 +11,6 @@ Feature: Add Vacacy
     And I enter Vacancy Name as "QA Architect"
     And I select Job Title as "Payroll Administrator"
     And I enter Description as "Require 10 + experience"
-    And I enter Hiring Manager as "JohnDoe"
+    And I enter Hiring Manager as "savina dulvin dulvin"
     And I click the save button
-    Then I should see the new vacancy in the list
+    Then I should see the count of records increase by one
