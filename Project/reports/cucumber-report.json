@@ -1,0 +1,54 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "book-api-testing;create-a-book-with-valid-data",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Create a book with valid data",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have valid book data",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a POST request to \"/api/books\" with the valid data",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should get a status code of 201",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "book-api-testing",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Book API Testing",
+    "tags": [],
+    "uri": "src/features/bookCreation.feature"
+  }
+]
