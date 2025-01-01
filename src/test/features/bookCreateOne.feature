@@ -8,8 +8,8 @@ Feature: Book API Testing
     When I send a POST request to "/api/books" with body:
       """
       {
-        "title": "QGhjvufruyfviukd",
-        "author": "dcyd56ducvuyiol"
+        "title": "Hansima",
+        "author": "My Lord"
       }
       """
     Then the response status code should be 201
@@ -19,15 +19,15 @@ Feature: Book API Testing
     When I send a POST request to "/api/books" with body:
       """
       {
-        "title": "Bvcvghhjk,lockchain Revolution",
-        "author": "Afdfcgvhvghjbklex Nakamoto"
+        "title": "H.M.Nish",
+        "author": "The Story"
       }
       """
     And I send a POST request to "/api/books" with body:
       """
       {
-        "title": "Cyxcvbncgvjhkjberopertatiio",
-        "author": "komygbyuijk"
+        "title": "N.S.Niluk",
+        "author": "Harry"
       }
       """
     Then the response status code should be 201
