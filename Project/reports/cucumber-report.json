@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6934899
+              "duration": 3034100
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1475672700
+              "duration": 1320681399
             }
           },
           {
@@ -45,7 +45,15 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2172399
+              "duration": 851000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 287200
             }
           }
         ],
@@ -69,7 +77,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2842099
+              "duration": 982700
             }
           },
           {
@@ -82,7 +90,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 301631000
+              "duration": 154628199
             }
           },
           {
@@ -95,8 +103,16 @@
             },
             "result": {
               "status": "failed",
-              "duration": 3578099,
-              "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
+              "duration": 1669499,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -201\n    +400\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 128800
             }
           }
         ],
@@ -120,7 +136,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1990800
+              "duration": 857399
             }
           },
           {
@@ -133,7 +149,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 227103900
+              "duration": 162375199
             }
           },
           {
@@ -146,8 +162,16 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1218299,
+              "duration": 605500,
               "error_message": "AssertionError\n    + expected - actual\n\n    -201\n    +400\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 575299
             }
           }
         ],
@@ -171,7 +195,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2331900
+              "duration": 1395299
             }
           },
           {
@@ -184,7 +208,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 261334999
+              "duration": 165779500
             }
           },
           {
@@ -197,8 +221,16 @@
             },
             "result": {
               "status": "failed",
-              "duration": 907000,
+              "duration": 539999,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 105799
             }
           }
         ],
@@ -222,7 +254,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3018399
+              "duration": 1425600
             }
           },
           {
@@ -235,7 +267,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 253558500
+              "duration": 128581599
             }
           },
           {
@@ -248,7 +280,15 @@
             },
             "result": {
               "status": "passed",
-              "duration": 421999
+              "duration": 155600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 125199
             }
           }
         ],
@@ -272,7 +312,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 251931599
+              "duration": 196229600
             }
           },
           {
@@ -285,7 +325,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 272709899
+              "duration": 180926199
             }
           },
           {
@@ -298,8 +338,16 @@
             },
             "result": {
               "status": "failed",
-              "duration": 696399,
+              "duration": 335399,
               "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +200\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 124699
             }
           }
         ],
@@ -323,7 +371,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 550899
+              "duration": 190000
             }
           },
           {
@@ -336,7 +384,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 274446700
+              "duration": 144257599
             }
           },
           {
@@ -349,8 +397,16 @@
             },
             "result": {
               "status": "failed",
-              "duration": 868599,
+              "duration": 1144600,
               "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +404\n\n    at World.<anonymous> (C:\\Hashini\\ITQA_Group_22-main\\Project\\src\\step_definitions\\bookCreation.steps.js:85:31)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 121700
             }
           }
         ],
@@ -374,7 +430,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 345040399
+              "duration": 141484899
             }
           },
           {
@@ -387,7 +443,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 247563200
+              "duration": 159232899
             }
           },
           {
@@ -400,7 +456,15 @@
             },
             "result": {
               "status": "passed",
-              "duration": 419699
+              "duration": 513899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 213999
             }
           }
         ],
@@ -424,7 +488,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 255904700
+              "duration": 173062700
             }
           },
           {
@@ -437,7 +501,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 265470400
+              "duration": 215343600
             }
           },
           {
@@ -450,7 +514,15 @@
             },
             "result": {
               "status": "passed",
-              "duration": 322199
+              "duration": 356299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 135699
             }
           }
         ],
@@ -474,7 +546,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 240534800
+              "duration": 137259200
             }
           },
           {
@@ -487,7 +559,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 595099
+              "duration": 194000
             }
           },
           {
@@ -500,7 +572,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 222748700
+              "duration": 158490299
             }
           },
           {
@@ -513,7 +585,15 @@
             },
             "result": {
               "status": "passed",
-              "duration": 295700
+              "duration": 208599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 163499
             }
           }
         ],
@@ -527,5 +607,301 @@
     "name": "Book API Testing",
     "tags": [],
     "uri": "src\\features\\bookCreation.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "orangehrm-login-and-employee-management;search-for-full-time-permanent-employees",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Search for Full-Time Permanent employees",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I open the login page",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10642215299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I enter username \"Admin\" and password \"admin123\"",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50437899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I click the login button",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:131"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1087051999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should be redirected to the dashboard",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:135"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 489911499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "I navigate to PIM page",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2830795100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I select Full-Time Permanent from employment status",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:147"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1161507000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I click the search button",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:154"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46114799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "I should see the filtered results for Full-Time Permanent employees",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:159"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 866323300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 297210699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "orangehrm-login-and-employee-management;search-employee-by-name-and-id-then-reset",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Search employee by name and ID then reset",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I open the login page",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7476414600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I enter username \"Admin\" and password \"admin123\"",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:126"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43706600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I click the login button",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:131"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1053937300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I should be redirected to the dashboard",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:135"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 448298599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I navigate to PIM page",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:141"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2728073899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I enter employee name \"Nishara\"",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:165"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1877057699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I enter employee ID \"0038\"",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:177"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1487333700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I click the search button",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:154"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53973200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I should see the search results",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:188"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 351340100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "I click the reset button",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:194"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67992799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "the search fields should be cleared",
+            "match": {
+              "location": "src\\step_definitions\\resetFields.js:204"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8267100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 225538100
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "orangehrm-login-and-employee-management",
+    "line": 17,
+    "keyword": "Feature",
+    "name": "OrangeHRM Login and Employee Management",
+    "tags": [],
+    "uri": "src\\features\\resetFields.feature"
   }
 ]

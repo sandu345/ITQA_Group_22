@@ -5,8 +5,8 @@
    "type": "commonjs",
    "scripts": {
       "pretest": "rimraf logs && mkdir logs",
-      "test": "cucumber-js --format html:reports/cucumber-report.html --format @cucumber/pretty-formatter",
-"test:report": "npm run pretest && npm test && npx open-cli reports/cucumber-report.html"
+      "test": "cucumber-js --format html:reports/cucumber-report.html --format @cucumber/pretty-formatter" ,
+      "test:report": "npm run pretest && npm test && npx open-cli reports/cucumber-report.html"
    },
    "devDependencies": {
       "@babel/core": "^7.26.0",
@@ -26,6 +26,9 @@
       "rimraf": "^6.0.1"
    },
    "dependencies": {
-      "allure-js-commons": "^3.0.7"
+      "allure-js-commons": "^3.0.7",
+      "@cucumber/cucumber": "^7.3.2",
+      "playwright": "^1.12.3",
+      "assert": "^2.0.0"
    }
 }
