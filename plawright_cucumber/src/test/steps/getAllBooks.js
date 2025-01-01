@@ -5,10 +5,6 @@ import { request } from '@playwright/test';
 let context;
 let response;
 
-Given('the system is running', async function() {
-    // Background setup
-});
-
 Given('I am logged in as {string} user', async function(userType) {
     context = await request.newContext({
         baseURL: 'http://localhost:7081',
@@ -25,11 +21,11 @@ Given('I am not authenticated', async function() {
 });
 
 Given('there are books in the system', async function() {
-    // Instead of verifying, we just assume the system state
+    // Assume the system state
 });
 
 Given('there are no books in the system', async function() {
-    // Instead of verifying, we just assume the system state
+    // Assume the system state
 });
 
 When('I send GET request to {string}', async function(endpoint) {
