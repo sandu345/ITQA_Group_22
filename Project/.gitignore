@@ -1,9 +1,10 @@
-
 /node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-logs/
+/logs/
+/src/logs/
 /package-lock.json
 /demo-0.0.1-SNAPSHOT.jar
+/reports/
