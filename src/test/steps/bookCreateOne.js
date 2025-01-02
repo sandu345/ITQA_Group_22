@@ -1,88 +1,116 @@
+
+
 const { Given, When, Then, After } = require('@cucumber/cucumber');
-const { request } = require('@playwright/test');
-const { expect } = require('@playwright/test');
+const { request, expect } = require('@playwright/test');
 
-let apiContext;
-let baseURL;
-let lastResponse;
-let responseData = [];
+// Constants
+const HTTP_HEADERS = {
+    CONTENT_TYPE: 'application/json'
+};
 
-Given('the API endpoint is {string}', async function (endpoint) {
-    baseURL = endpoint;
-    apiContext = await request.newContext({
-        baseURL: endpoint
-    });
-});
+const HTTP_STATUS = {
+    SERVER_ERROR: 500
+};
 
-Given('I am authenticated as {string} with password {string}', async function (username, password) {
-    const authBuffer = Buffer.from(`${username}:${password}`).toString('base64');
-    apiContext = await request.newContext({
-        baseURL: baseURL,
-        extraHTTPHeaders: {
-            'Authorization': `Basic ${authBuffer}`,
-            'Content-Type': 'application/json'
-        }
-    });
-});
+// State management
+class TestContext {
+    constructor() {
+        this.apiContext = null;
+        this.baseURL = '';
+        this.lastResponse = null;
+        this.responseData = [];
+    }
 
-When('I send a POST request to {string} with body:', async function (endpoint, body) {
+    reset() {
+        this.lastResponse = null;
+        this.responseData = [];
+    }
+}
+
+const context = new TestContext();
+
+// Helpers
+const createAuthHeader = (username, password) => {
+    return `Basic ${Buffer.from(`${username}:${password}`).toString('base64')}`;
+};
+
+const parseRequestBody = (body) => {
     try {
-        let parsedBody = body;
-        try {
-            // Handle both JSON string and template literal cases
-            parsedBody = typeof body === 'string' ? JSON.parse(body) : eval(`(${body})`);
-        } catch (e) {
-            console.error('Error parsing body:', e);
-        }
+        return typeof body === 'string' ? JSON.parse(body) : eval(`(${body})`);
+    } catch (error) {
+        console.error('Body parsing error:', error);
+        throw error;
+    }
+};
 
-        const response = await apiContext.post(endpoint, {
+// Step definitions
+Given('the API endpoint is {string}', async function(endpoint) {
+    context.baseURL = endpoint;
+    context.apiContext = await request.newContext({ baseURL: endpoint });
+});
+
+Given('I am authenticated as {string} with password {string}', async function(username, password) {
+    context.apiContext = await request.newContext({
+        baseURL: context.baseURL,
+        extraHTTPHeaders: {
+            'Authorization': createAuthHeader(username, password),
+            'Content-Type': HTTP_HEADERS.CONTENT_TYPE
+        }
+    });
+});
+
+When('I send a POST request to {string} with body:', async function(endpoint, body) {
+    try {
+        const parsedBody = parseRequestBody(body);
+        const response = await context.apiContext.post(endpoint, {
             data: parsedBody,
             failOnStatusCode: false
         });
-        
-        lastResponse = response;
+
+        context.lastResponse = response;
         const responseBody = await response.json().catch(() => ({}));
-        responseData.push({ response, body: responseBody });
-        
-        console.log('Response Status:', response.status());
-        console.log('Response Body:', responseBody);
-        
+        context.responseData.push({ response, body: responseBody });
+
+        console.log({
+            status: response.status(),
+            body: responseBody
+        });
     } catch (error) {
         console.error('Request failed:', error);
-        lastResponse = {
-            status: () => error.response?.status || 500,
+        context.lastResponse = {
+            status: () => error.response?.status || HTTP_STATUS.SERVER_ERROR,
             json: async () => error.response?.json() || {}
         };
     }
 });
 
-Then('the response status code should be {int}', async function (expectedStatus) {
-    if (!lastResponse) {
-        throw new Error('No response received from the API');
+Then('the response status code should be {int}', async function(expectedStatus) {
+    if (!context.lastResponse) {
+        throw new Error('No API response received');
     }
-    expect(lastResponse.status()).toBe(expectedStatus);
+    expect(context.lastResponse.status()).toBe(expectedStatus);
 });
 
-Then('both books should have different IDs', async function () {
-    expect(responseData.length).toBeGreaterThanOrEqual(2);
-    const firstBook = responseData[responseData.length - 2].body;
-    const secondBook = responseData[responseData.length - 1].body;
+Then('both books should have different IDs', async function() {
+    expect(context.responseData.length).toBeGreaterThanOrEqual(2);
+    const [firstBook, secondBook] = context.responseData.slice(-2).map(data => data.body);
     expect(firstBook.id).not.toBe(secondBook.id);
-    console.log(`First book ID: ${firstBook.id}, Second book ID: ${secondBook.id}`);
+    console.log({
+        firstBookId: firstBook.id,
+        secondBookId: secondBook.id
+    });
 });
 
-Then('the response should contain an auto-generated id', async function () {
-    const responseBody = await lastResponse.json();
+Then('the response should contain an auto-generated id', async function() {
+    const responseBody = await context.lastResponse.json();
     expect(responseBody).toHaveProperty('id');
     expect(responseBody.id).toBeTruthy();
-    console.log('Auto-generated book ID:', responseBody.id);
+    console.log('Generated ID:', responseBody.id);
 });
 
-After(async function () {
-    if (apiContext) {
-        await apiContext.dispose();
+After(async function() {
+    if (context.apiContext) {
+        await context.apiContext.dispose();
     }
-    lastResponse = null;
-    responseData = [];
+    context.reset();
 });
-
