@@ -1,0 +1,13 @@
+{
+  "default": {
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    },
+    "paths": [
+      "features/"
+    ],
+    "dryRun": false,
+    "import": ["step_definitions"],
+    "format": ["json:reports/cucumber_report.json"]
+  }
+}

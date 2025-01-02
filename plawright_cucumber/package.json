@@ -1,0 +1,21 @@
+{
+  "name": "plawright_cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "cucumber-js test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.1.1",
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.2"
+  },
+  "dependencies": {
+    "chai": "^5.1.2"
+  }
+}
