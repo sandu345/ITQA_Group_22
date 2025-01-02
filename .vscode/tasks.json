@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+      {
+         "type": "npm",
+         "script": "test:report",
+         "group": "build",
+         "label": "npm: test:report",
+         "detail": "run npm script 'test:report'",
+         "presentation": {
+            "reveal": "silent"
+         }
+      }
+   ]
+}

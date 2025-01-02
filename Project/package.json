@@ -4,10 +4,16 @@
    "main": "index.js",
    "type": "commonjs",
    "scripts": {
-      "pretest": "rm -rf logs && mkdir -p logs",
-      "test": "cucumber-js --format html:reports/cucumber-report.html --format @cucumber/pretty-formatter",
-      "test:report": "npm run pretest && npm test && xdg-open reports/cucumber-report.html || open reports/cucumber-report.html"
-    },
+      "test": "cucumber-js --profile default",
+      "test:ui": "cucumber-js --profile ui",
+      "test:api": "cucumber-js --profile api",  
+      "report": "npx open-cli reports/cucumber-report.html", 
+      "report:ui": "npx open-cli reports/ui-cucumber-report.html", 
+      "report:api": "npx open-cli reports/api-cucumber-report.html", 
+      "report:ubuntu": "xdg-open reports/cucumber-report.html",
+      "report:ui:ubuntu": "xdg-open reports/ui-cucumber-report.html",
+      "report:api:ubuntu": "xdg-open reports/api-cucumber-report.html"
+   },
    "devDependencies": {
       "@babel/core": "^7.26.0",
       "@babel/preset-env": "^7.26.0",
@@ -21,9 +27,15 @@
       "allure-playwright": "^3.0.7",
       "axios": "^1.7.9",
       "chai": "^4.3.7",
-      "playwright": "^1.49.1"
+      "cucumber": "^6.0.7",
+      "open": "^10.1.0",
+      "playwright": "^1.49.1",
+      "rimraf": "^6.0.1"
    },
    "dependencies": {
-      "allure-js-commons": "^3.0.7"
+      "@cucumber/cucumber": "^7.3.2",
+      "allure-js-commons": "^3.0.7",
+      "assert": "^2.0.0",
+      "playwright": "^1.12.3"
    }
-}  
+}
