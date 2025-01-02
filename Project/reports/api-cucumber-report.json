@@ -1,5 +1,1004 @@
 [
   {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "book-api-testing;verify-user-role-cannot-create-a-book",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Verify user role cannot create a book",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6883238
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the API endpoint is \"http://localhost:7081\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1337291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am authenticated as \"user\" with password \"password\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1245896
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"title\": \"Hansima {datetime}\",\n  \"author\": \"My Lord\"\n}",
+                "line": 9
+              }
+            ],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I send a POST request to \"/api/books\" with body:",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98426462
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the response status code should be 201",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1659783
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1819610
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 161351
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 862590
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "book-api-testing;verify-unique-ids-are-generated",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Verify unique IDs are generated",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000036
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the API endpoint is \"http://localhost:7081\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 999170
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am authenticated as \"admin\" with password \"password\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1222842
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"title\": \"H.M.Nish {datetime}\",\n  \"author\": \"The Story\"\n}",
+                "line": 20
+              }
+            ],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I send a POST request to \"/api/books\" with body:",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79755147
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"title\": \"N.S.Niluk {datetime}\",\n  \"author\": \"Harry\"\n}",
+                "line": 27
+              }
+            ],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I send a POST request to \"/api/books\" with body:",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5657837
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "the response status code should be 201",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 350901
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "both books should have different IDs",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:101"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 779944
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 848010
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 194776
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 964944
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "book-api-testing;verify-error-for-non-string-title-or-author",
+        "keyword": "Scenario Outline",
+        "line": 36,
+        "name": "Verify error for non-string title or author",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 847589
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the API endpoint is \"http://localhost:7081\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 820323
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 37,
+            "name": "I am authenticated as \"admin\" with password \"password\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1159230
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"title\": 46416416,\n  \"author\": 5616536\n}",
+                "line": 39
+              }
+            ],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I send a POST request to \"/api/books\" with body:",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78937988
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 45,
+            "name": "the response status code should be 400",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3523712,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/createBook_Hansani.step.js:98:26)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 817396
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 100670
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 635182
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "book-api-testing;verify-book-creation-without-id-field",
+        "keyword": "Scenario",
+        "line": 47,
+        "name": "Verify book creation without id field",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 814268
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the API endpoint is \"http://localhost:7081\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 910008
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 48,
+            "name": "I am authenticated as \"admin\" with password \"password\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1006456
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"title\": \"Test Book Without ID {datetime}\",\n  \"author\": \"Test Author\"\n}",
+                "line": 50
+              }
+            ],
+            "keyword": "When ",
+            "line": 49,
+            "name": "I send a POST request to \"/api/books\" with body:",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82266797
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 56,
+            "name": "the response status code should be 201",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 569539
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "the response should contain an auto-generated id",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:107"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1865641
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 692006
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 56219
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 555575
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "book-api-testing;verify-error-when-creating-book-with-duplicate-id",
+        "keyword": "Scenario",
+        "line": 59,
+        "name": "Verify error when creating book with duplicate ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 788002
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the API endpoint is \"http://localhost:7081\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 702622
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 60,
+            "name": "I am authenticated as \"admin\" with password \"password\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 761602
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"id\": \"1234\",\n  \"title\": \"Original Book\",\n  \"author\": \"Original Author\"\n}",
+                "line": 62
+              }
+            ],
+            "keyword": "When ",
+            "line": 61,
+            "name": "I send a POST request to \"/api/books\" with body:",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78709785
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"id\": \"1234\",\n  \"title\": \"Another Book\",\n  \"author\": \"Another Author\"\n}",
+                "line": 70
+              }
+            ],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I send a POST request to \"/api/books\" with body:",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4987303
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 77,
+            "name": "the response status code should be 400",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 873776,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/createBook_Hansani.step.js:98:26)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 767205
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 74859
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 604961
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "book-api-testing",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Book API Testing",
+    "tags": [],
+    "uri": "src/api/features/createBook_Hansani.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-a-new-book;create-a-book-with-valid-data",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Create a book with valid data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 670821
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have valid book data",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 197253
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I send a POST request to \"/api/books\" with the valid data",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 86591654
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should get a status code of 201",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 616583
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 666486
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 45871
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 863065
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;create-a-book-with-missing-title",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Create a book with missing title",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 683151
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I have invalid book data without title",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I send a POST request to \"/api/books\" with the invalid data",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77801917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should get a status code of 400",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1100684,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 616395
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 42439
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 380697
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;create-a-book-with-missing-author",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Create a book with missing author",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 815153
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I have invalid book data without author",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147821
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I send a POST request to \"/api/books\" with the invalid data",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77304699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should get a status code of 400",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 282705,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -201\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 604758
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 41496
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 363708
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;create-a-book-with-both-title-and-author-missing",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Create a book with both title and author missing",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 574264
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I have invalid book data without title and author",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115776
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I send a POST request to \"/api/books\" with the invalid data",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76030538
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should get a status code of 400",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 286835,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 585563
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 42752
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 358565
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-book;create-a-book-with-unauthorized-user",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Create a book with unauthorized user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 659767
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I have valid book data but invalid credentials",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128487
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I send a POST request to \"/api/books\" with the valid data",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75497165
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should get a status code of 401",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 200999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 607479
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 47978
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 417948
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-a-new-book",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create a new book",
+    "tags": [],
+    "uri": "src/api/features/createBook_Wathsalya.feature"
+  },
+  {
     "description": "  As a library system user\n  I want to access the book list with proper authorization\n  So that I can view books securely",
     "elements": [
       {
@@ -10,6 +1009,14 @@
         "name": "Authorized user can view books when books exist",
         "steps": [
           {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 641873
+            }
+          },
+          {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
@@ -19,7 +1026,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2014214
+              "duration": 125849
             }
           },
           {
@@ -32,7 +1039,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 9648634
+              "duration": 712264
             }
           },
           {
@@ -45,7 +1052,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 165158
+              "duration": 102219
             }
           },
           {
@@ -58,7 +1065,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 99636706
+              "duration": 80885689
             }
           },
           {
@@ -71,7 +1078,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 710650
+              "duration": 195580
             }
           },
           {
@@ -84,7 +1091,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2111918
+              "duration": 1794593
             }
           },
           {
@@ -92,7 +1099,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2335895
+              "duration": 524423
             }
           },
           {
@@ -100,7 +1107,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 347803
+              "duration": 609177
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 379371
             }
           }
         ],
@@ -115,6 +1130,14 @@
         "name": "Authorized user sees empty list when no books exist",
         "steps": [
           {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 511856
+            }
+          },
+          {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
@@ -124,7 +1147,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 219199
+              "duration": 65104
             }
           },
           {
@@ -137,7 +1160,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1206154
+              "duration": 584321
             }
           },
           {
@@ -150,7 +1173,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 214919
+              "duration": 105457
             }
           },
           {
@@ -163,7 +1186,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 80439341
+              "duration": 77730248
             }
           },
           {
@@ -176,7 +1199,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 176629
+              "duration": 125213
             }
           },
           {
@@ -189,8 +1212,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1656030,
-              "error_message": "AssertionError\n    + expected - actual\n\n    -242\n    +0\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getAllBooks_Sanduni.step.js:59:29)"
+              "duration": 883462,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -248\n    +0\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getAllBooks_Sanduni.step.js:59:29)"
             }
           },
           {
@@ -198,7 +1221,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 873660
+              "duration": 511903
             }
           },
           {
@@ -206,7 +1229,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 94272
+              "duration": 470072
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 341053
             }
           }
         ],
@@ -221,6 +1252,14 @@
         "name": "Unauthorized user cannot access books when books exist",
         "steps": [
           {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 588821
+            }
+          },
+          {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
@@ -230,7 +1269,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 188959
+              "duration": 69030
             }
           },
           {
@@ -243,7 +1282,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1400330
+              "duration": 597171
             }
           },
           {
@@ -256,7 +1295,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 140145
+              "duration": 57170
             }
           },
           {
@@ -269,7 +1308,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4333807
+              "duration": 3415549
             }
           },
           {
@@ -282,7 +1321,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 217446
+              "duration": 155085
             }
           },
           {
@@ -290,7 +1329,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 824819
+              "duration": 587671
             }
           },
           {
@@ -298,7 +1337,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 59394
+              "duration": 463940
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 464226
             }
           }
         ],
@@ -313,6 +1360,14 @@
         "name": "Unauthorized user cannot access books when no books exist",
         "steps": [
           {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 632311
+            }
+          },
+          {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
@@ -322,7 +1377,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79032
+              "duration": 93955
             }
           },
           {
@@ -335,7 +1390,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 715347
+              "duration": 577334
             }
           },
           {
@@ -348,7 +1403,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 80224
+              "duration": 96737
             }
           },
           {
@@ -361,7 +1416,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3173990
+              "duration": 2963944
             }
           },
           {
@@ -374,7 +1429,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 154219
+              "duration": 153489
             }
           },
           {
@@ -382,7 +1437,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 821117
+              "duration": 562038
             }
           },
           {
@@ -390,7 +1445,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56755
+              "duration": 424113
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 426494
             }
           }
         ],
@@ -404,5 +1467,807 @@
     "name": "Book API Access Control",
     "tags": [],
     "uri": "src/api/features/getAllBooks_Sanduni.feature"
+  },
+  {
+    "description": "  As a library system user\n  I want to retrieve book information by ID\n  So that I can view specific book details",
+    "elements": [
+      {
+        "description": "",
+        "id": "get-book-by-id-api;successfully-retrieve-a-book-with-valid-id",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Successfully retrieve a book with valid ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 565675
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am authenticated as \"admin\" for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 157607
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I send a GET request to \"/api/books/1\" for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81838846
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "the response status code should be 200 for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 197674
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the response should contain the correct book details for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 783805
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 501611
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 389466
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 422884
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-book-by-id-api;attempt-to-retrieve-non-existent-book",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Attempt to retrieve non-existent book",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 574784
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I am authenticated as \"admin\" for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90232
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I send a GET request to \"/api/books/99999\" for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77446189
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "the response status code should be 404 for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89762
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 474727
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 303660
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 298721
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-book-by-id-api;attempt-to-access-book-without-authentication",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Attempt to access book without authentication",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 509491
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am not authenticated for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76056
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I send a GET request to \"/api/books/1\" without authentication for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2713749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "the response status code should be 401 for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101949
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 480096
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 357481
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 280301
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-book-by-id-api;user-role-can-access-book-details",
+        "keyword": "Scenario",
+        "line": 22,
+        "name": "User role can access book details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 456376
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 23,
+            "name": "I am authenticated as \"user\" for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62996
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I send a GET request to \"/api/books/1\" for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75682140
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "the response status code should be 200 for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:49"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 191547,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -403\n    +200\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getBookByID_Kosala.step.js:50:31)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "the response should contain the correct book details for getBookByID",
+            "match": {
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:53"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 486695
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 296718
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 265308
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "get-book-by-id-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Get Book by ID API",
+    "tags": [],
+    "uri": "src/api/features/getBookByID_Kosala.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "update-the-book-details;update-a-book-with-valid-data",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Update a book with valid data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 453876
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have an existing book",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75896740
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I update the book with new valid data",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74184463
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I should get a status code of 200",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 159369,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +200\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 925637
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 306678
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 283620
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-the-book-details;update-a-non-existing-book",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Update a non-existing book",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 466579
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I have an invalid book ID",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107809
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I try to update the non-existing book",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75101954
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should get a status code of 404",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 201405,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +404\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 610387
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 338623
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 292798
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-the-book-details;update-a-book-with-missing-title",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Update a book with missing title",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 497569
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I have an existing book",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75200830
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I update the book without title",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74694609
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should get a status code of 400",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154465
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 834922
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 486948
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 518271
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-the-book-details;update-a-book-with-missing-author",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Update a book with missing author",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 709287
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I have an existing book",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76025360
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I update the book without author",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76977292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should get a status code of 400",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 106344
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 788893
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 314249
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 296327
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-the-book-details;update-a-book-with-unauthorized-user",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Update a book with unauthorized user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 493199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I have an existing book",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76963203
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I have invalid credentials",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 153794
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "I try to update the book",
+            "match": {
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:113"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76068056
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should get a status code of 401",
+            "match": {
+              "location": "src/api/step_definitions/common.steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119646
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 574223
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 296862
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 270514
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "update-the-book-details",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Update the book details",
+    "tags": [],
+    "uri": "src/api/features/updateBook_Hashini.feature"
   }
 ]
