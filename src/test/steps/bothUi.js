@@ -1,3 +1,5 @@
+
+
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
 const assert = require('assert');
@@ -9,55 +11,64 @@ Given('I open the login page', { timeout: 30000 }, async () => {
     browser = await chromium.launch({ headless: false });
     const context = await browser.newContext();
     page = await context.newPage();
-    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', { waitUntil: 'domcontentloaded' });
-    await page.waitForSelector('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input');
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    await page.waitForSelector('[name="username"]');
 });
 
 When('I enter username {string} and password {string}', async (username, password) => {
-    await page.fill('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input', username);
-    await page.fill('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input', password);
+    await page.locator('[name="username"]').fill(username);
+    await page.locator('[name="password"]').fill(password);
 });
 
 When('I click the login button', async () => {
-    await page.click('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button');
-    await page.waitForSelector('text=Dashboard');
+    await page.locator('button[type="submit"]').click();
+    await page.waitForSelector('.oxd-text--h6');
 });
 
 When('I search for {string}', async (searchTerm) => {
-    await page.waitForSelector('xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/div/div/input');
-    await page.fill('xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/div/div/input', searchTerm);
-    await page.press('xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/div/div/input', 'Enter');
+    await page.locator('.oxd-main-menu-search input').fill(searchTerm);
+    await page.locator('.oxd-main-menu-search input').press('Enter');
     await page.waitForTimeout(2000);
 });
 
 When('I click on Admin menu', async () => {
-    await page.click('xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[1]/a');
+    await page.locator('.oxd-main-menu-item').first().click();
     await page.waitForURL('**/admin/viewSystemUsers');
 });
 
-When('I click Add button', async () => {
-    await page.click('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button');
-    await page.waitForURL('**/admin/saveSystemUser');
+When('I click Add button', { timeout: 15000 }, async () => {
+    // Wait for page load and button to be visible
+    await page.waitForLoadState('networkidle');
+    await page.waitForSelector('.oxd-button--secondary', { state: 'visible', timeout: 10000 });
+    
+    // Click the Add button more precisely
+    await page.locator('.oxd-button--secondary').filter({ hasText: 'Add' }).click();
+    
+    // Wait for navigation
+    await page.waitForURL('**/admin/saveSystemUser', { timeout: 10000 });
 });
 
-When('I click Cancel button', async () => {
-    await page.click('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[3]/button[1]');
+When('I click Cancel button', { timeout: 15000 }, async () => {
+    await page.waitForLoadState('networkidle');
+    await page.waitForSelector('button:has-text("Cancel")', { state: 'visible' });
+    await page.locator('button:has-text("Cancel")').click();
     await page.waitForURL('**/admin/viewSystemUsers');
 });
 
-When('I click profile button', async () => {
-    await page.click('xpath=//*[@id="app"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/p');
+When('I click profile button', { timeout: 10000 }, async () => {
+    await page.waitForSelector('.oxd-userdropdown-tab');
+    await page.locator('.oxd-userdropdown-tab').click();
 });
 
 When('I click logout', async () => {
-    await page.click('xpath=//*[@id="app"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/ul/li[4]/a');
-    await page.waitForTimeout(2000); // Add delay to ensure logout completes
+    await page.locator('text=Logout').click();
+    await page.waitForTimeout(2000);
 });
 
 Then('I should be redirected to login page', async () => {
-    await page.waitForTimeout(2000); // Extra wait to ensure page loads
+    await page.waitForTimeout(2000);
     await page.waitForURL('**/auth/login');
-    const loginFormVisible = await page.isVisible('form');
-    assert.strictEqual(loginFormVisible, true, 'Login form should be visible');
+    const loginFormVisible = await page.locator('form').isVisible();
+    assert.strictEqual(loginFormVisible, true);
     await browser.close();
 });

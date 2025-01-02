@@ -1,3 +1,4 @@
+
 Feature: Book API Testing
 
   Background: 
@@ -38,19 +39,13 @@ Feature: Book API Testing
     When I send a POST request to "/api/books" with body:
       """
       {
-        "title": <title>,
-        "author": <author>
+        "title": 46416416,
+        "author": 5616536
       }
       """
     Then the response status code should be 400
 
-    Examples:
-      | title     | author  |
-      | &^**($&^  | &*)*)*_ |
-
-
-
-   Scenario: Verify book creation without id field
+  Scenario: Verify book creation without id field
     Given I am authenticated as "admin" with password "password"
     When I send a POST request to "/api/books" with body:
       """
@@ -61,3 +56,23 @@ Feature: Book API Testing
       """
     Then the response status code should be 201
     And the response should contain an auto-generated id
+
+  Scenario: Verify error when creating book with duplicate ID
+    Given I am authenticated as "admin" with password "password"
+    When I send a POST request to "/api/books" with body:
+      """
+      {
+        "id": "1234",
+        "title": "Original Book",
+        "author": "Original Author"
+      }
+      """
+    And I send a POST request to "/api/books" with body:
+      """
+      {
+        "id": "1234",
+        "title": "Another Book",
+        "author": "Another Author"
+      }
+      """
+    Then the response status code should be 400
