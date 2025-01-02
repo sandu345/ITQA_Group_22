@@ -24,7 +24,6 @@ Given('I have an existing book', async function () {
             validateStatus: () => true
         });
         existingBookId = createResponse.data.id;
-        console.log('Created book for update:', createResponse.data);
     } catch (error) {
         console.error('Error creating book:', error);
     }
@@ -41,7 +40,6 @@ When('I update the book with new valid data', async function () {
             headers,
             validateStatus: () => true
         });
-        console.log('Update response:', { status: this.response.status, data: this.response.data });
     } catch (error) {
         this.response = error.response || { status: 500, data: 'Internal Server Error' };
         console.error('Update error:', { error: error.message, response: this.response });
@@ -67,7 +65,6 @@ When('I try to update the non-existing book', async function () {
             headers,
             validateStatus: () => true
         });
-        console.log('Update non-existing book response:', { status: this.response.status, data: this.response.data });
     } catch (error) {
         this.response = error.response || { status: 500, data: 'Internal Server Error' };
         console.error('Update non-existing book error:', { error: error.message, response: this.response });
@@ -84,7 +81,6 @@ When('I update the book without title', async function () {
             headers,
             validateStatus: () => true
         });
-        console.log('Update no title response:', { status: this.response.status, data: this.response.data });
     } catch (error) {
         this.response = error.response || { status: 500, data: 'Internal Server Error' };
         console.error('Update no title error:', { error: error.message, response: this.response });
@@ -101,7 +97,6 @@ When('I update the book without author', async function () {
             headers,
             validateStatus: () => true
         });
-        console.log('Update no author response:', { status: this.response.status, data: this.response.data });
     } catch (error) {
         this.response = error.response || { status: 500, data: 'Internal Server Error' };
         console.error('Update no author error:', { error: error.message, response: this.response });
@@ -126,7 +121,6 @@ When('I try to update the book', async function () {
             headers,
             validateStatus: () => true
         });
-        console.log('Update unauthorized response:', { status: this.response.status, data: this.response.data });
     } catch (error) {
         this.response = error.response || { status: 500, data: 'Internal Server Error' };
         console.error('Update unauthorized error:', { error: error.message, response: this.response });
@@ -145,7 +139,6 @@ Then('the book details should be updated', async function () {
         
         expect(verifyResponse.data.title).to.equal(updateData.title);
         expect(verifyResponse.data.author).to.equal(updateData.author);
-        console.log('Verify update:', verifyResponse.data);
     } catch (error) {
         console.error('Verify update error:', error);
         throw error;

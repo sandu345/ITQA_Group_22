@@ -14,7 +14,6 @@ Given('I have valid book data', function () {
       title: `Test Book ${Date.now()}`,
       author: 'Test Author'
    };
-   console.log('Valid request:', bookData);
 });
 
 Given('I have invalid book data without title', function () {
@@ -23,7 +22,6 @@ Given('I have invalid book data without title', function () {
       'Content-Type': 'application/json'
    };
    bookData = { author: 'Test Author' };
-   console.log('Invalid request no title:', bookData);
 });
 
 Given('I have invalid book data without author', function () {
@@ -32,7 +30,6 @@ Given('I have invalid book data without author', function () {
       'Content-Type': 'application/json'
    };
    bookData = { title: `Test Book ${Date.now()}` };
-   console.log('Invalid request no author:', bookData);
 });
 
 Given('I have invalid book data without title and author', function () {
@@ -41,7 +38,6 @@ Given('I have invalid book data without title and author', function () {
       'Content-Type': 'application/json'
    };
    bookData = {};
-   console.log('Invalid request no fields:', bookData);
 });
 
 Given('I have valid book data but invalid credentials', function () {
@@ -53,7 +49,6 @@ Given('I have valid book data but invalid credentials', function () {
       title: `Test Book ${Date.now()}`,
       author: 'Test Author'
    };
-   console.log('Invalid credentials:', bookData);
 });
 
 When('I send a POST request to {string} with the {word} data', async function (url, dataType) {
@@ -62,10 +57,8 @@ When('I send a POST request to {string} with the {word} data', async function (u
          headers,
          validateStatus: () => true
       });
-      console.log('Response:', { status: this.response.status, data: this.response.data });
    } catch (error) {
       this.response = error.response || { status: 500, data: 'Internal Server Error' };
-      console.error('Error:', { error: error.message, response: this.response });
    }
 });
 
