@@ -1,0 +1,298 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "orangehrm-login-and-employee-management;search-for-full-time-permanent-employees",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Search for Full-Time Permanent employees",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the login page",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8494334344
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I enter username \"Admin\" and password \"admin123\"",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28819097
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1355719005
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should be redirected to the dashboard",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 902774967
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I navigate to PIM page",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3299345961
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I select Full-Time Permanent from employment status",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1138174179
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click the search button",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27635894
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see the filtered results for Full-Time Permanent employees",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 845453534
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 123051331
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "orangehrm-login-and-employee-management;search-employee-by-name-and-id-then-reset",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Search employee by name and ID then reset",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the login page",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8578005485
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I enter username \"Admin\" and password \"admin123\"",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33690424
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1269597714
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should be redirected to the dashboard",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 932317435
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I navigate to PIM page",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2773873712
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I enter employee name \"Nishara\"",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1808332950
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I enter employee ID \"0038\"",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1467134332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I click the search button",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51454318
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "I should see the search results",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:80"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 834927846
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "I click the reset button",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:86"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67223574
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "the search fields should be cleared",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:96"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6833920
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 109702754
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "orangehrm-login-and-employee-management",
+    "line": 3,
+    "keyword": "Feature",
+    "name": "OrangeHRM Login and Employee Management",
+    "tags": [],
+    "uri": "src/ui/features/resetFieldsDropdown_Hashini.feature"
+  }
+]

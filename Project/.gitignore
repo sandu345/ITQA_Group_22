@@ -5,3 +5,6 @@
 /playwright/.cache/
 /logs/
 /src/logs/
+/package-lock.json
+/demo-0.0.1-SNAPSHOT.jar
+/reports/
