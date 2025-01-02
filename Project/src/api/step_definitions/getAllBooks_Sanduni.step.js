@@ -1,9 +1,15 @@
-import { Given, When, Then, After } from '@cucumber/cucumber';
-import { expect } from '@playwright/test';
-import { request } from '@playwright/test';
+const { Given, When, Then, After } = require('@cucumber/cucumber');
+const { expect } = require('chai');
+const { request } = require('@playwright/test');
 
 let context;
 let response;
+
+Given('the system is running', async function() {
+    // This step can be used to ensure the system is up and running
+    // For now, we assume the system is always running
+    return true;
+});
 
 Given('I am logged in as {string} user', async function(userType) {
     context = await request.newContext({
@@ -33,23 +39,24 @@ When('I send GET request to {string}', async function(endpoint) {
 });
 
 Then('the response status should be {int}', async function(statusCode) {
-    expect(response.status()).toBe(statusCode);
+    expect(response.status()).to.equal(statusCode);
 });
 
 Then('the response should contain the list of books', async function() {
     const books = await response.json();
-    expect(Array.isArray(books)).toBeTruthy();
+    expect(Array.isArray(books)).to.be.true;
     if (books.length > 0) {
         const firstBook = books[0];
-        expect(firstBook).toHaveProperty('id');
-        expect(firstBook).toHaveProperty('title');
-        expect(firstBook).toHaveProperty('author');
+        expect(firstBook).to.have.property('id');
+        expect(firstBook).to.have.property('title');
+        expect(firstBook).to.have.property('author');
     }
 });
 
 Then('the response should contain an empty list', async function() {
     const books = await response.json();
-    expect(Array.isArray(books)).toBeTruthy();
+    expect(Array.isArray(books)).to.be.true;
+    expect(books.length).to.equal(0);
 });
 
 After(async function() {
