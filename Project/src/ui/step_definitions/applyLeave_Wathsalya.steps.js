@@ -1,7 +1,18 @@
-const { Given, When, Then, setDefaultTimeout } = require('@cucumber/cucumber');
+const { Given, When, Then, Before, setDefaultTimeout } = require('@cucumber/cucumber');
+const { chromium } = require('playwright');
 const { expect } = require('@playwright/test');
 
 setDefaultTimeout(60000); // Set default timeout to 60 seconds
+
+let browser;
+let page;
+
+Before(async function () {
+    browser = await chromium.launch({ headless: false });
+    const context = await browser.newContext();
+    page = await context.newPage();
+    this.page = page;
+});
 
 Given('I am logged in as an admin user', async function () {
    await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
@@ -29,7 +40,7 @@ When('I select leave type {string}', async function (leaveType) {
    await this.page.locator(`div[role="option"]:has-text("${leaveType}")`).click();
 });
 
-When('I click the search button', async function () {
+When('I click the leave search button', async function () {
    await this.page.locator('button:has-text("Search")').click();
 });
 

@@ -9,7 +9,7 @@ Feature: Leave Function
     And I enter from date "2022-01-01"
     And I enter to date "2024-01-01"
     And I select leave type "taken"
-    And I click the search button
+    And I click the leave search button
     Then I should see the leave requests in the list or a message indicating there are no records to show
 
   Scenario: Successfully define the leave period

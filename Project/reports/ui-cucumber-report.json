@@ -1,116 +1,111 @@
 [
   {
-    "description": "",
+    "description": "  As an employee\n  I want to search applied leaves and define leave periods\n  So that I can manage the leave requests",
     "elements": [
       {
         "description": "",
-        "id": "orangehrm-login-and-employee-management;search-for-full-time-permanent-employees",
+        "id": "leave-function;successfully-search-for-applied-leaves-with-valid-inputs",
         "keyword": "Scenario",
-        "line": 11,
-        "name": "Search for Full-Time Permanent employees",
+        "line": 6,
+        "name": "Successfully search for applied leaves with valid inputs",
         "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 557049606
+            }
+          },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
-            "name": "I open the login page",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:10"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 8494334344
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
             "line": 7,
-            "name": "I enter username \"Admin\" and password \"admin123\"",
+            "name": "I am logged in as an admin user",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:18"
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:17"
             },
             "result": {
               "status": "passed",
-              "duration": 28819097
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "I click the login button",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:23"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1355719005
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 9,
-            "name": "I should be redirected to the dashboard",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 902774967
+              "duration": 7014291110
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
+            "line": 8,
+            "name": "I navigate to the leave application page",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 623487033
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter from date \"2022-01-01\"",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1342476196
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I enter to date \"2024-01-01\"",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16607943
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I select leave type \"taken\"",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 99940361
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
             "line": 12,
-            "name": "I navigate to PIM page",
+            "name": "I click the leave search button",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:33"
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:43"
             },
             "result": {
               "status": "passed",
-              "duration": 3299345961
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 13,
-            "name": "I select Full-Time Permanent from employment status",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:39"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1138174179
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 14,
-            "name": "I click the search button",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:46"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 27635894
+              "duration": 51459973
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 15,
-            "name": "I should see the filtered results for Full-Time Permanent employees",
+            "line": 13,
+            "name": "I should see the leave requests in the list or a message indicating there are no records to show",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:51"
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:47"
             },
             "result": {
               "status": "passed",
-              "duration": 845453534
+              "duration": 13132027
             }
           },
           {
@@ -118,7 +113,254 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 123051331
+              "duration": 192423
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "leave-function;successfully-define-the-leave-period",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Successfully define the leave period",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 550062823
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "I am logged in as an admin user",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6454663940
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I navigate to the define leave period page",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 556828919
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I select start month \"March\"",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2354243290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I select start date \"05\"",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90095797
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click the save button",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66585807
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see the end date \"March 04 (Following Year)\"",
+            "match": {
+              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6835236
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 127324
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "leave-function",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Leave Function",
+    "tags": [],
+    "uri": "src/ui/features/applyLeave_Wathsalya.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "orangehrm-login-and-employee-management;search-for-full-time-permanent-employees",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "Search for Full-Time Permanent employees",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 555659415
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the login page",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6896520509
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I enter username \"Admin\" and password \"admin123\"",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29747482
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I click the login button",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1240624211
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I should be redirected to the dashboard",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 927488198
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I navigate to PIM page",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3393909397
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I select Full-Time Permanent from employment status",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1120574719
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click the PIM search button",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22918863
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see the filtered results for Full-Time Permanent employees",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 841767966
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114566343
             }
           }
         ],
@@ -129,150 +371,158 @@
         "description": "",
         "id": "orangehrm-login-and-employee-management;search-employee-by-name-and-id-then-reset",
         "keyword": "Scenario",
-        "line": 17,
+        "line": 15,
         "name": "Search employee by name and ID then reset",
         "steps": [
           {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 501709994
+            }
+          },
+          {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
+            "line": 4,
             "name": "I open the login page",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:10"
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:8"
             },
             "result": {
               "status": "passed",
-              "duration": 8578005485
+              "duration": 8249652060
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 7,
+            "line": 5,
             "name": "I enter username \"Admin\" and password \"admin123\"",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:18"
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 33690424
+              "duration": 27593692
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 8,
+            "line": 6,
             "name": "I click the login button",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:23"
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:21"
             },
             "result": {
               "status": "passed",
-              "duration": 1269597714
+              "duration": 1280777651
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
+            "line": 7,
             "name": "I should be redirected to the dashboard",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:27"
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:25"
             },
             "result": {
               "status": "passed",
-              "duration": 932317435
+              "duration": 904755148
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 18,
+            "line": 16,
             "name": "I navigate to PIM page",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:33"
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 2773873712
+              "duration": 3636455443
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I enter employee name \"Nishara\"",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1814778236
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I enter employee ID \"0038\"",
+            "match": {
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1491506010
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 19,
-            "name": "I enter employee name \"Nishara\"",
+            "name": "I click the PIM search button",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:57"
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:44"
             },
             "result": {
               "status": "passed",
-              "duration": 1808332950
+              "duration": 77794993
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "Then ",
             "line": 20,
-            "name": "I enter employee ID \"0038\"",
+            "name": "I should see the search results",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:69"
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:79"
             },
             "result": {
               "status": "passed",
-              "duration": 1467134332
+              "duration": 851310640
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "When ",
             "line": 21,
-            "name": "I click the search button",
+            "name": "I click the reset button",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:46"
+              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:85"
             },
             "result": {
               "status": "passed",
-              "duration": 51454318
+              "duration": 65017053
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 22,
-            "name": "I should see the search results",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:80"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 834927846
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 23,
-            "name": "I click the reset button",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:86"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 67223574
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 24,
             "name": "the search fields should be cleared",
             "match": {
               "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:96"
             },
             "result": {
               "status": "passed",
-              "duration": 6833920
+              "duration": 7683046
             }
           },
           {
@@ -280,7 +530,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 109702754
+              "duration": 117943740
             }
           }
         ],
@@ -289,7 +539,7 @@
       }
     ],
     "id": "orangehrm-login-and-employee-management",
-    "line": 3,
+    "line": 1,
     "keyword": "Feature",
     "name": "OrangeHRM Login and Employee Management",
     "tags": [],

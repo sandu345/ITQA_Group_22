@@ -1,5 +1,3 @@
-
-
 const { Given, When, Then, After } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
 const assert = require('assert');
@@ -43,7 +41,7 @@ When('I select Full-Time Permanent from employment status', async () => {
     await page.waitForTimeout(1000);
 });
 
-When('I click the search button', async () => {
+When('I click the PIM search button', async () => {
     await page.click('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]');
     await page.waitForLoadState('networkidle');
 });
@@ -77,6 +75,7 @@ When('I enter employee ID {string}', async (id) => {
     await page.type(idInputSelector, id, { delay: 100 });  // Type the ID "456" with a slight delay
     await page.waitForTimeout(1000);  // Wait to ensure the text is fully entered
 });
+
 Then('I should see the search results', async () => {
     await page.waitForSelector('.oxd-table-row', { state: 'visible', timeout: 10000 });
     const rows = await page.$$('.oxd-table-row');
@@ -93,14 +92,13 @@ When('I click the reset button', async () => {
     await page.click(resetButtonSelector);
     await page.waitForLoadState('networkidle');  // Wait for the page to stabilize after the reset
 });
+
 Then('the search fields should be cleared', async () => {
     // Verify the fields are cleared
     const nameValue = await page.inputValue('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input');
     const idValue = await page.inputValue('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/input');
     assert.strictEqual(nameValue, '', 'Name field is not cleared');
     assert.strictEqual(idValue, '', 'ID field is not cleared');
-
-  
 });
 
 After(async () => {

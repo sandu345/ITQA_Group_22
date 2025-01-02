@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4172308
+              "duration": 3428890
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 115341245
+              "duration": 101484559
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 894182
+              "duration": 819766
             }
           }
         ],
@@ -69,7 +69,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 314380
+              "duration": 228642
             }
           },
           {
@@ -82,7 +82,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 87298751
+              "duration": 81016578
             }
           },
           {
@@ -95,7 +95,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1533359,
+              "duration": 1178755,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:6:37)"
             }
           }
@@ -120,7 +120,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 551537
+              "duration": 372595
             }
           },
           {
@@ -133,7 +133,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 88319479
+              "duration": 80740005
             }
           },
           {
@@ -146,7 +146,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 444523,
+              "duration": 590068,
               "error_message": "AssertionError\n    + expected - actual\n\n    -201\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:6:37)"
             }
           }
@@ -171,7 +171,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 341117
+              "duration": 397175
             }
           },
           {
@@ -184,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 88098886
+              "duration": 80510598
             }
           },
           {
@@ -197,7 +197,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 501416,
+              "duration": 519303,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:6:37)"
             }
           }
@@ -222,7 +222,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 442397
+              "duration": 287917
             }
           },
           {
@@ -235,7 +235,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 85505541
+              "duration": 79212542
             }
           },
           {
@@ -248,7 +248,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 352372
+              "duration": 444436
             }
           }
         ],
@@ -283,7 +283,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 83650764
+              "duration": 81520922
             }
           },
           {
@@ -296,7 +296,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 87587178
+              "duration": 78901340
             }
           },
           {
@@ -309,7 +309,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 472606,
+              "duration": 318895,
               "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +200\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:6:37)"
             }
           }
@@ -334,7 +334,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 128645
+              "duration": 173670
             }
           },
           {
@@ -347,7 +347,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 85419462
+              "duration": 79201195
             }
           },
           {
@@ -360,7 +360,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 557784,
+              "duration": 319412,
               "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +404\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:6:37)"
             }
           }
@@ -385,7 +385,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 87207442
+              "duration": 81541831
             }
           },
           {
@@ -398,7 +398,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 82250029
+              "duration": 78421981
             }
           },
           {
@@ -411,7 +411,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 231616
+              "duration": 277726
             }
           }
         ],
@@ -435,7 +435,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 90788444
+              "duration": 81551466
             }
           },
           {
@@ -448,7 +448,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 83601325
+              "duration": 82155547
             }
           },
           {
@@ -461,7 +461,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 368430
+              "duration": 366816
             }
           }
         ],
@@ -485,7 +485,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 82941762
+              "duration": 80640392
             }
           },
           {
@@ -498,7 +498,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 182389
+              "duration": 127203
             }
           },
           {
@@ -511,7 +511,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79104370
+              "duration": 77881401
             }
           },
           {
@@ -524,7 +524,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 344546
+              "duration": 213063
             }
           }
         ],
