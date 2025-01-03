@@ -14,7 +14,6 @@ Given('I have an existing book', async function () {
     
     // First create a book to update
     const createData = {
-        title: `Test Book ${Date.now()}`,
         author: 'Test Author'
     };
     
@@ -31,6 +30,7 @@ Given('I have an existing book', async function () {
 
 When('I update the book with new valid data', async function () {
     updateData = {
+         id: existingBookId,
         title: `Updated Book ${Date.now()}`,
         author: 'Updated Author'
     };
@@ -56,6 +56,7 @@ Given('I have an invalid book ID', function () {
 
 When('I try to update the non-existing book', async function () {
     updateData = {
+         id: existingBookId,
         title: `Updated Book ${Date.now()}`,
         author: 'Updated Author'
     };
@@ -73,6 +74,7 @@ When('I try to update the non-existing book', async function () {
 
 When('I update the book without title', async function () {
     updateData = {
+       id: existingBookId,
         author: 'Updated Author'
     };
     
@@ -89,6 +91,7 @@ When('I update the book without title', async function () {
 
 When('I update the book without author', async function () {
     updateData = {
+      id: existingBookId,
         title: `Updated Book ${Date.now()}`
     };
     
