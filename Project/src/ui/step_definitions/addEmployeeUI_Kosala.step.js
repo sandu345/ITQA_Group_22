@@ -65,6 +65,7 @@ When('I fill in the required employee details', async function () {
 });
 
 When('I click the save button for add employee', async function () {
+    await this.page.waitForSelector(selectors.saveButton, { timeout: 60000 });
     await this.page.click(selectors.saveButton);
 });
 

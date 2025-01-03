@@ -50,7 +50,7 @@ When('I click the login button for timesheet management', async function () {
 
 When('I navigate to Time module for timesheet management', async function () {
     await this.page.click('xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[4]/a');
-    await this.page.waitForURL('**/time/viewTimeModule');
+    await this.page.waitForURL('**/time/viewTimeModule', { timeout: 60000 });
 });
 
 When('I search and select employee name {string} in the timesheet search bar', async function (employeeName) {
