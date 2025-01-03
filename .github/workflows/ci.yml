@@ -30,8 +30,8 @@ jobs:
         working-directory: ./Project
 
       - name: Start API server
-        run: java -jar ./Project/demo-0.0.1-SNAPSHOT.jar &
-        working-directory: /
+        run: java -jar demo-0.0.1-SNAPSHOT.jar
+        working-directory: ./Project
 
       - name: Wait for API server to be ready
         run: |
@@ -57,8 +57,8 @@ jobs:
         continue-on-error: true
 
       - name: Stop API server
-        run: pkill -f 'java -jar ./Project/demo-0.0.1-SNAPSHOT.jar'
-        working-directory: /
+        run: pkill -f 'java -jar demo-0.0.1-SNAPSHOT.jar'
+        working-directory: ./Project
 
       - name: Upload UI test report
         uses: actions/upload-artifact@v3
