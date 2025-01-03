@@ -29,6 +29,10 @@ jobs:
         run: npx playwright install
         working-directory: ./Project
 
+      - name: Start API server
+        run: java -jar demo-0.0.1-SNAPSHOT.jar &
+        working-directory: /
+
       - name: Run UI tests
         run: npm run test:ui
         working-directory: ./Project
@@ -37,7 +41,11 @@ jobs:
       - name: Run API tests
         run: npm run test:api
         working-directory: ./Project
-        continue-on-error: true
+        continue-on-error: false
+
+      - name: Stop API server
+        run: pkill -f 'java -jar demo-0.0.1-SNAPSHOT.jar'
+        working-directory: /
 
       - name: Upload UI test report
         uses: actions/upload-artifact@v3
