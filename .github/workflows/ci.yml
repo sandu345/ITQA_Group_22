@@ -29,8 +29,12 @@ jobs:
         run: npx playwright install
         working-directory: ./Project
 
+      - name: Install Playwright dependencies
+        run: sudo npx playwright install-deps
+        working-directory: ./Project
+
       - name: Start API server
-        run: java -jar demo-0.0.1-SNAPSHOT.jar
+        run: java -jar demo-0.0.1-SNAPSHOT.jar &
         working-directory: ./Project
 
       - name: Wait for API server to be ready
