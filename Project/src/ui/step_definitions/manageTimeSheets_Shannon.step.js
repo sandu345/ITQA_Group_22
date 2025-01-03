@@ -1,27 +1,16 @@
 const { Given, When, Then, After } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
 const assert = require('assert');
+const { urls, credentials, selectors } = require('./consts');
 
 let browser;
 let page;
-
-const selectors = {
-    usernameInput: 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input',
-    passwordInput: 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input',
-    loginButton: 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button',
-    timeModule: 'xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[4]/a/span',
-    timesheetSearchBar: '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/form/div[1]/div/div/div/div[2]/div/div/input',
-    timesheetViewButton: 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/form/div[2]/button',
-    pendingActionViewButton: 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[3]/div/button',
-    timesheetDetails: '//*[@id="app"]/div[1]/div[2]/div[2]/div',
-    recordsMessage: 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span',
-};
 
 Given('I open the login page for timesheet management', { timeout: 30000 }, async () => {
     browser = await chromium.launch({ headless: false });
     const context = await browser.newContext();
     page = await context.newPage();
-    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', {
+    await page.goto(urls.login, {
         waitUntil: 'domcontentloaded',
     });
     await page.waitForSelector(selectors.usernameInput);

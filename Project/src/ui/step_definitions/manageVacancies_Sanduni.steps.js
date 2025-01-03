@@ -1,6 +1,7 @@
 const { Given, When, Then, setDefaultTimeout, Before, After, setWorldConstructor } = require('@cucumber/cucumber');
 const { expect } = require('@playwright/test');
 const { chromium } = require('playwright');
+const { urls, credentials } = require('./consts');
 
 setDefaultTimeout(60000); // Set default timeout to 60 seconds
 
@@ -31,11 +32,11 @@ After(async function () {
 });
 
 Given('I am logged in as an admin user for manageVacancies', async function () {
-   await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', { timeout: 60000 });
-   await this.page.getByPlaceholder('Username').fill('admin');
-   await this.page.getByPlaceholder('Password').fill('admin123');
+   await this.page.goto(urls.login, { timeout: 60000 });
+   await this.page.getByPlaceholder('Username').fill(credentials.admin.username);
+   await this.page.getByPlaceholder('Password').fill(credentials.admin.password);
    await this.page.getByRole('button', { name: 'Login' }).click();
-   await this.page.waitForURL('**/dashboard/index');
+   await this.page.waitForURL(urls.dashboard);
 });
 
 Given('I select the recruitment tab for manageVacancies', async function () {
@@ -43,51 +44,51 @@ Given('I select the recruitment tab for manageVacancies', async function () {
 });
 
 When('I navigate to the vacancies page for manageVacancies', async function () {
-   await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewJobVacancy');
-   const initialCountText = await this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span').textContent();
+   await this.page.goto(urls.recruitment);
+   const initialCountText = await this.page.locator('span.oxd-text.oxd-text--span').first().textContent();
    this.initialCount = parseInt(initialCountText.match(/\d+/)[0], 10);
 });
 
 When('I click the add button for manageVacancies', async function () {
    await this.page.locator('button:has-text("Add")').click();
-   await this.page.waitForURL('https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addJobVacancy');
+   await this.page.waitForURL(urls.addJobVacancy);
 });
 
 When('I enter Vacancy Name as {string} for manageVacancies', async function (vacancyName) {
    const uniqueVacancyName = `${vacancyName} ${Date.now()}`;
    this.vacancyName = uniqueVacancyName;
-   const vacancyNameField = this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[1]/div/div[2]/input');
+   const vacancyNameField = this.page.locator('input[name="name"]');
    await vacancyNameField.waitFor({ state: 'visible', timeout: 60000 });
    await vacancyNameField.fill(uniqueVacancyName);
 });
 
 When('I select Job Title as {string} for manageVacancies', async function (jobTitle) {
-   const dropdown = this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div/div[2]/div/div/div[1]');
+   const dropdown = this.page.locator('div.oxd-select-text-input');
    await dropdown.click();
    await this.page.waitForSelector(`div[role="option"]:has-text("${jobTitle}")`, { state: 'visible', timeout: 30000 });
    await this.page.locator(`div[role="option"]:has-text("${jobTitle}")`).click();
 });
 
 When('I enter Description as {string} for manageVacancies', async function (description) {
-   await this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/div/div/div[2]/textarea').fill(description);
+   await this.page.locator('textarea[name="description"]').fill(description);
 });
 
 When('I enter Hiring Manager as {string} for manageVacancies', async function (hiringManager) {
-   const hiringManagerInput = this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[3]/div[1]/div/div[2]/div/div/input');
+   const hiringManagerInput = this.page.locator('input[name="hiringManager"]');
    await hiringManagerInput.fill(hiringManager);
    await this.page.waitForSelector(`div[role="option"]:has-text("${hiringManager}")`, { state: 'visible', timeout: 60000 });
    await this.page.locator(`div[role="option"]:has-text("${hiringManager}")`).click();
 });
 
 When('I click the save button for manageVacancies', async function () {
-   await this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[7]/button[2]').click();
+   await this.page.locator('button:has-text("Save")').click();
 });
 
 Then('I should see the count of records increase by one for manageVacancies', async function () {
    await this.page.waitForTimeout(5000); // Wait for 5 seconds to allow the count to update
-   await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewJobVacancy');
+   await this.page.goto(urls.recruitment);
    await this.page.waitForTimeout(10000); // Wait for 10 seconds to allow the count to update
-   const finalCountText = await this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span').textContent();
+   const finalCountText = await this.page.locator('span.oxd-text.oxd-text--span').first().textContent();
    const finalCount = parseInt(finalCountText.match(/\d+/)[0], 10);
    expect(finalCount).toBe(this.initialCount + 1);
 });
