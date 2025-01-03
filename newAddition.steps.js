@@ -20,13 +20,6 @@ Given('I am not authenticated', async function() {
     });
 });
 
-// Given('there are books in the system', async function() {
-//     // Assume the system state
-// });
-
-// Given('there are no books in the system', async function() {
-//     // Assume the system state
-// });
 
 When('I send GET request to {string}', async function(endpoint) {
     response = await context.get(endpoint);
