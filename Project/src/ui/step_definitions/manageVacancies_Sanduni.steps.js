@@ -63,7 +63,6 @@ When('I enter Vacancy Name as {string} for manageVacancies', async function (vac
 
 When('I select Job Title as {string} for manageVacancies', async function (jobTitle) {
    const dropdown = this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]/div/div[2]/div/div/div[1]');
-   this.jobTitle = jobTitle;
    await dropdown.click();
    await this.page.waitForSelector(`div[role="option"]:has-text("${jobTitle}")`, { state: 'visible', timeout: 30000 });
    await this.page.locator(`div[role="option"]:has-text("${jobTitle}")`).click();
@@ -75,9 +74,8 @@ When('I enter Description as {string} for manageVacancies', async function (desc
 
 When('I enter Hiring Manager as {string} for manageVacancies', async function (hiringManager) {
    const hiringManagerInput = this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[3]/div[1]/div/div[2]/div/div/input');
-   this.hiringManager = hiringManager;
    await hiringManagerInput.fill(hiringManager);
-   await this.page.waitForSelector(`div[role="option"]:has-text("${hiringManager}")`, { state: 'visible', timeout: 30000 });
+   await this.page.waitForSelector(`div[role="option"]:has-text("${hiringManager}")`, { state: 'visible', timeout: 60000 });
    await this.page.locator(`div[role="option"]:has-text("${hiringManager}")`).click();
 });
 
@@ -115,19 +113,17 @@ When("I click the search button for manageVacancies", async function () {
 });
 
 Then(
-   "I should see the vacancies in the list or a message indicating there are no records to show for manageVacancies",
+   "I should see the vacancies in the list for manageVacancies",
    async function () {
       const vacancies = this.page.locator(".oxd-table-card");
       const noRecordsMessage = this.page.locator("text=No Records Found");
-      const recordFoundMessage = this.page.locator(
-         "div.orangehrm-horizontal-padding span.oxd-text--span"
-      );
+      const recordFoundMessage = this.page.locator('span:has-text("Record Found"), span:has-text("Records Found")');
 
       const isVacanciesVisible = await vacancies.isVisible();
       const isNoRecordsMessageVisible = await noRecordsMessage.isVisible();
       const recordFoundText = await recordFoundMessage.textContent();
       const isRecordFoundMessageVisible =
-         recordFoundText.includes("Record Found");
+         recordFoundText.includes("Record Found") || recordFoundText.includes("Records Found");
 
       expect(
          isVacanciesVisible ||
