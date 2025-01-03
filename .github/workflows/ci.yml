@@ -37,7 +37,7 @@ jobs:
         run: |
           echo "Waiting for API server to be ready..."
           for i in {1..30}; do
-            if curl -s http://localhost:7081/health; then
+            if curl -s http://localhost:7081/; then
               echo "API server is ready!"
               break
             fi
