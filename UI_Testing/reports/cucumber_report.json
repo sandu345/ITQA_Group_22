@@ -1,10 +1,10 @@
 [
   {
-    "description": "  As an admin user\n  I want to add a new vacancy\n  So that I can create a new job vacancy",
+    "description": "  As an admin user\n  I want to manage job vacancies\n  So that I can add and search for job vacancies",
     "elements": [
       {
         "description": "",
-        "id": "add-vacancy;successfully-add-a-new-vacancy-with-valid-inputs",
+        "id": "manage-vacancies;successfully-add-a-new-vacancy-with-valid-inputs",
         "keyword": "Scenario",
         "line": 6,
         "name": "Successfully add a new vacancy with valid inputs",
@@ -14,138 +14,289 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11709024799
+              "duration": 1015290700
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "I am logged in as an admin user",
+            "name": "I am logged in as an admin user for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:23"
+              "location": "step_definitions\\manageVacancies.steps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 6214123400
+              "duration": 5761309900
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 8,
-            "name": "I select the recruitment tab",
+            "name": "I select the recruitment tab for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:33"
+              "location": "step_definitions\\manageVacancies.steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 1523222999
+              "duration": 1557806799
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 9,
-            "name": "I navigate to the vacancies page",
+            "name": "I navigate to the vacancies page for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:38"
+              "location": "step_definitions\\manageVacancies.steps.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 1775623800
+              "duration": 1898993300
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 10,
-            "name": "I click the add button",
+            "name": "I click the add button for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:47"
+              "location": "step_definitions\\manageVacancies.steps.js:51"
             },
             "result": {
               "status": "passed",
-              "duration": 440988000
+              "duration": 466081100
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
-            "name": "I enter Vacancy Name as \"QA Architect\"",
+            "name": "I enter Vacancy Name as \"QA Architect\" for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:54"
+              "location": "step_definitions\\manageVacancies.steps.js:56"
             },
             "result": {
               "status": "passed",
-              "duration": 394127300
+              "duration": 466538599
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 12,
-            "name": "I select Job Title as \"Payroll Administrator\"",
+            "name": "I select Job Title as \"Payroll Administrator\" for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:62"
+              "location": "step_definitions\\manageVacancies.steps.js:64"
             },
             "result": {
               "status": "passed",
-              "duration": 405468600
+              "duration": 451922399
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 13,
-            "name": "I enter Description as \"Require 10 + experience\"",
+            "name": "I enter Description as \"Require 10 + experience\" for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:69"
+              "location": "step_definitions\\manageVacancies.steps.js:72"
             },
             "result": {
               "status": "passed",
-              "duration": 9530699
+              "duration": 26577999
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 14,
-            "name": "I enter Hiring Manager as \"savina dulvin dulvin\"",
+            "name": "I enter Hiring Manager as \"Ranga Akunuri\" for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:74"
+              "location": "step_definitions\\manageVacancies.steps.js:76"
             },
             "result": {
               "status": "passed",
-              "duration": 14897899
+              "duration": 1485326299
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 15,
-            "name": "I click the save button",
+            "name": "I click the save button for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:84"
+              "location": "step_definitions\\manageVacancies.steps.js:84"
             },
             "result": {
               "status": "passed",
-              "duration": 38351099
+              "duration": 51096400
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 16,
-            "name": "I should see the count of records increase by one",
+            "name": "I should see the count of records increase by one for manageVacancies",
             "match": {
-              "location": "step_definitions\\addVacancy.steps.js:89"
+              "location": "step_definitions\\manageVacancies.steps.js:88"
             },
             "result": {
-              "status": "failed",
-              "duration": 10432430600,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m12\u001b[39m\nReceived: \u001b[31m11\u001b[39m\n    at Proxy.<anonymous> (C:\\Users\\sandu\\OneDrive\\Documents\\GitHub\\ITQA_Group_22\\UI_Testing\\node_modules\\playwright\\lib\\matchers\\expect.js:227:37)\n    at CustomWorld.<anonymous> (C:\\Users\\sandu\\OneDrive\\Documents\\GitHub\\ITQA_Group_22\\UI_Testing\\step_definitions\\addVacancy.steps.js:97:24)"
+              "status": "passed",
+              "duration": 10483828400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 544006699
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "manage-vacancies;successfully-search-for-the-newly-added-vacancy",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Successfully search for the newly added vacancy",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 654468600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am logged in as an admin user for manageVacancies",
+            "match": {
+              "location": "step_definitions\\manageVacancies.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6247203100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I select the recruitment tab for manageVacancies",
+            "match": {
+              "location": "step_definitions\\manageVacancies.steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1551985399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I navigate to the vacancies page for manageVacancies",
+            "match": {
+              "location": "step_definitions\\manageVacancies.steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1777936600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I select job title \"Account Assistant\" for manageVacancies",
+            "match": {
+              "location": "step_definitions\\manageVacancies.steps.js:97"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 408166299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I select vacancy \"test\" for manageVacancies",
+            "match": {
+              "location": "step_definitions\\manageVacancies.steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131079900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I select hiring manager \"Rahul Patil\" for manageVacancies",
+            "match": {
+              "location": "step_definitions\\manageVacancies.steps.js:113"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 98861499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I select status \"Active\" for manageVacancies",
+            "match": {
+              "location": "step_definitions\\manageVacancies.steps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84216499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click the search button for manageVacancies",
+            "match": {
+              "location": "step_definitions\\manageVacancies.steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 67233999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should see the vacancies in the list or a message indicating there are no records to show for manageVacancies",
+            "match": {
+              "location": "step_definitions\\manageVacancies.steps.js:137"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 811674799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 495116199
             }
           }
         ],
@@ -153,11 +304,11 @@
         "type": "scenario"
       }
     ],
-    "id": "add-vacancy",
+    "id": "manage-vacancies",
     "line": 1,
     "keyword": "Feature",
-    "name": "Add Vacancy",
+    "name": "Manage Vacancies",
     "tags": [],
-    "uri": "features\\addVacancy.feature"
+    "uri": "features\\manageVacancies.feature"
   }
 ]
