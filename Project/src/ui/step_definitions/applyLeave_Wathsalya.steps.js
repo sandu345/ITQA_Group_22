@@ -8,14 +8,17 @@ let browser;
 let page;
 
 Before(async function () {
-    browser = await chromium.launch({ headless: false });
+    const isCI = process.env.CI === 'true';
+    browser = await chromium.launch({ headless: isCI });
     const context = await browser.newContext();
     page = await context.newPage();
     this.page = page;
 });
 
 After(async function () {
-    await browser.close();
+    if (browser && browser.isConnected()) {
+        await browser.close();
+    }
 });
 
 Given('I am logged in as an admin user', async function () {
