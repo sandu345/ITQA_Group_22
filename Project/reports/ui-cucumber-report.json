@@ -1,111 +1,150 @@
 [
   {
-    "description": "  As an employee\n  I want to search applied leaves and define leave periods\n  So that I can manage the leave requests",
+    "description": "  As an admin user\n  I want to manage job vacancies\n  So that I can add and search for job vacancies",
     "elements": [
       {
         "description": "",
-        "id": "leave-function;successfully-search-for-applied-leaves-with-valid-inputs",
+        "id": "manage-vacancies;successfully-add-a-new-vacancy-with-valid-inputs",
         "keyword": "Scenario",
         "line": 6,
-        "name": "Successfully search for applied leaves with valid inputs",
+        "name": "Successfully add a new vacancy with valid inputs",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 557049606
+              "duration": 526691354
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "I am logged in as an admin user",
+            "name": "I am logged in as an admin user for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:17"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 7014291110
+              "duration": 6023855219
             }
           },
           {
             "arguments": [],
-            "keyword": "When ",
+            "keyword": "And ",
             "line": 8,
-            "name": "I navigate to the leave application page",
+            "name": "I select the recruitment tab for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:25"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 623487033
+              "duration": 1847513613
             }
           },
           {
             "arguments": [],
-            "keyword": "And ",
+            "keyword": "When ",
             "line": 9,
-            "name": "I enter from date \"2022-01-01\"",
+            "name": "I navigate to the vacancies page for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:29"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 1342476196
+              "duration": 2458959372
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 10,
-            "name": "I enter to date \"2024-01-01\"",
+            "name": "I click the add button for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:33"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:51"
             },
             "result": {
               "status": "passed",
-              "duration": 16607943
+              "duration": 497065125
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 11,
-            "name": "I select leave type \"taken\"",
+            "name": "I enter Vacancy Name as \"QA Architect\" for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:37"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:56"
             },
             "result": {
               "status": "passed",
-              "duration": 99940361
+              "duration": 828395741
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 12,
-            "name": "I click the leave search button",
+            "name": "I select Job Title as \"Payroll Administrator\" for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:43"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:64"
             },
             "result": {
               "status": "passed",
-              "duration": 51459973
+              "duration": 139950221
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I enter Description as \"Require 10 + experience\" for manageVacancies",
+            "match": {
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20770078
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I enter Hiring Manager as \"Ranga Akunuri\" for manageVacancies",
+            "match": {
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:76"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1348481767
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click the save button for manageVacancies",
+            "match": {
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:84"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32719822
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
-            "name": "I should see the leave requests in the list or a message indicating there are no records to show",
+            "line": 16,
+            "name": "I should see the count of records increase by one for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:47"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:88"
             },
             "result": {
               "status": "passed",
-              "duration": 13132027
+              "duration": 10601480230
             }
           },
           {
@@ -113,7 +152,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 192423
+              "duration": 122127558
             }
           }
         ],
@@ -122,407 +161,134 @@
       },
       {
         "description": "",
-        "id": "leave-function;successfully-define-the-leave-period",
+        "id": "manage-vacancies;successfully-search-for-the-newly-added-vacancy",
         "keyword": "Scenario",
-        "line": 15,
-        "name": "Successfully define the leave period",
+        "line": 18,
+        "name": "Successfully search for the newly added vacancy",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 550062823
+              "duration": 526065673
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 16,
-            "name": "I am logged in as an admin user",
-            "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:17"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6454663940
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 17,
-            "name": "I navigate to the define leave period page",
-            "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:59"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 556828919
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "I select start month \"March\"",
-            "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:63"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2354243290
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
             "line": 19,
-            "name": "I select start date \"05\"",
+            "name": "I am logged in as an admin user for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:69"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 90095797
+              "duration": 8083879994
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 20,
-            "name": "I click the save button",
+            "name": "I select the recruitment tab for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:75"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 66585807
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 21,
-            "name": "I should see the end date \"March 04 (Following Year)\"",
-            "match": {
-              "location": "src/ui/step_definitions/applyLeave_Wathsalya.steps.js:79"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6835236
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 127324
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      }
-    ],
-    "id": "leave-function",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "Leave Function",
-    "tags": [],
-    "uri": "src/ui/features/applyLeave_Wathsalya.feature"
-  },
-  {
-    "description": "",
-    "elements": [
-      {
-        "description": "",
-        "id": "orangehrm-login-and-employee-management;search-for-full-time-permanent-employees",
-        "keyword": "Scenario",
-        "line": 9,
-        "name": "Search for Full-Time Permanent employees",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 555659415
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "I open the login page",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 6896520509
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 5,
-            "name": "I enter username \"Admin\" and password \"admin123\"",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 29747482
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "I click the login button",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1240624211
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I should be redirected to the dashboard",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 927488198
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "I navigate to PIM page",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:31"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3393909397
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "I select Full-Time Permanent from employment status",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:37"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1120574719
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "I click the PIM search button",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:44"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 22918863
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 13,
-            "name": "I should see the filtered results for Full-Time Permanent employees",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:49"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 841767966
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 114566343
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "orangehrm-login-and-employee-management;search-employee-by-name-and-id-then-reset",
-        "keyword": "Scenario",
-        "line": 15,
-        "name": "Search employee by name and ID then reset",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 501709994
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "I open the login page",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 8249652060
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 5,
-            "name": "I enter username \"Admin\" and password \"admin123\"",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 27593692
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "I click the login button",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1280777651
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 7,
-            "name": "I should be redirected to the dashboard",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:25"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 904755148
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 16,
-            "name": "I navigate to PIM page",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:31"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3636455443
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 17,
-            "name": "I enter employee name \"Nishara\"",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:55"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1814778236
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "I enter employee ID \"0038\"",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:67"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1491506010
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 19,
-            "name": "I click the PIM search button",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:44"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 77794993
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 20,
-            "name": "I should see the search results",
-            "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:79"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 851310640
+              "duration": 1817131102
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 21,
-            "name": "I click the reset button",
+            "name": "I navigate to the vacancies page for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:85"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 65017053
+              "duration": 2405641704
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
+            "keyword": "And ",
             "line": 22,
-            "name": "the search fields should be cleared",
+            "name": "I select job title \"Account Assistant\" for manageVacancies",
             "match": {
-              "location": "src/ui/step_definitions/resetFieldsDropdown_Hashini.step.js:96"
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:97"
             },
             "result": {
               "status": "passed",
-              "duration": 7683046
+              "duration": 104435509
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I select vacancy \"test\" for manageVacancies",
+            "match": {
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:105"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89455586
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I select hiring manager \"Rahul Patil\" for manageVacancies",
+            "match": {
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:113"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107271246
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I select status \"Active\" for manageVacancies",
+            "match": {
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104773757
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click the search button for manageVacancies",
+            "match": {
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53533793
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "I should see the vacancies in the list or a message indicating there are no records to show for manageVacancies",
+            "match": {
+              "location": "src/ui/step_definitions/manageVacancies_Sanduni.steps.js:137"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 811278389
             }
           },
           {
@@ -530,7 +296,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 117943740
+              "duration": 201982229
             }
           }
         ],
@@ -538,11 +304,11 @@
         "type": "scenario"
       }
     ],
-    "id": "orangehrm-login-and-employee-management",
+    "id": "manage-vacancies",
     "line": 1,
     "keyword": "Feature",
-    "name": "OrangeHRM Login and Employee Management",
+    "name": "Manage Vacancies",
     "tags": [],
-    "uri": "src/ui/features/resetFieldsDropdown_Hashini.feature"
+    "uri": "src/ui/features/manageVacancies_Sanduni.feature"
   }
 ]
