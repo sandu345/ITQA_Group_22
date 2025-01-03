@@ -25,6 +25,10 @@ jobs:
         run: npm install
         working-directory: ./Project
 
+      - name: Install Playwright browsers
+        run: npx playwright install
+        working-directory: ./Project
+
       - name: Run UI tests
         run: npm run test:ui
         working-directory: ./Project
