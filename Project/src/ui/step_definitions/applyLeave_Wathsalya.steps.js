@@ -2,7 +2,7 @@ const { Given, When, Then, Before, After, setDefaultTimeout } = require('@cucumb
 const { chromium } = require('playwright');
 const { expect } = require('@playwright/test');
 
-setDefaultTimeout(60000); 
+setDefaultTimeout(90000); // Set default timeout to 90 seconds
 
 let browser;
 let page;

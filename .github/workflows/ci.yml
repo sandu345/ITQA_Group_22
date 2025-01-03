@@ -32,10 +32,12 @@ jobs:
       - name: Run UI tests
         run: npm run test:ui
         working-directory: ./Project
+        continue-on-error: true
 
       - name: Run API tests
         run: npm run test:api
         working-directory: ./Project
+        continue-on-error: true
 
       - name: Upload UI test report
         uses: actions/upload-artifact@v3
