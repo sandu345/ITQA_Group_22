@@ -88,7 +88,7 @@ When('I click the save button for manageVacancies', async function () {
 Then('I should see the count of records increase by one for manageVacancies', async function () {
    await this.page.waitForTimeout(5000); // Wait for 5 seconds to allow the count to update
    await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewJobVacancy');
-   await this.page.waitForTimeout(5000); // Wait for 5 seconds to allow the count to update
+   await this.page.waitForTimeout(10000); // Wait for 10 seconds to allow the count to update
    const finalCountText = await this.page.locator('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span').textContent();
    const finalCount = parseInt(finalCountText.match(/\d+/)[0], 10);
    expect(finalCount).toBe(this.initialCount + 1);
@@ -100,26 +100,6 @@ When("I select job title {string} for manageVacancies", async function (jobTitle
    );
    await dropdown.click();
    await this.page.locator(`div[role="option"]:has-text("${jobTitle}")`).click();
-});
-
-When("I select vacancy {string} for manageVacancies", async function (vacancy) {
-   const dropdown = this.page.locator(
-      'div.oxd-input-group:has(label:has-text("Vacancy")) div.oxd-select-text-input'
-   );
-   await dropdown.click();
-   await this.page.locator(`div[role="option"]:has-text("${vacancy}")`).click();
-});
-
-When("I select hiring manager {string} for manageVacancies", async function (hiringManager) {
-   const dropdown = this.page.locator(
-      'div.oxd-input-group:has(label:has-text("Hiring Manager")) div.oxd-select-text-input'
-   );
-   await dropdown.click();
-   const option = this.page.locator(
-      `div[role="option"]:has-text("${hiringManager}")`
-   );
-   await option.waitFor({ state: "visible", timeout: 60000 });
-   await option.click();
 });
 
 When("I select status {string} for manageVacancies", async function (status) {

@@ -1,6 +1,6 @@
-import { Given, When, Then } from '@cucumber/cucumber';
-import { chromium } from 'playwright';
-import assert from 'assert';
+const { Given, When, Then, After } = require('@cucumber/cucumber');
+const { chromium } = require('playwright');
+const assert = require('assert');
 
 let browser;
 let page;
@@ -10,13 +10,14 @@ const selectors = {
     passwordInput: 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input',
     loginButton: 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button',
     timeModule: 'xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[4]/a/span',
-    timesheetSearchBar: 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/form/div[1]/div/div/div/div[2]/div/div/input',
+    timesheetSearchBar: '//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/form/div[1]/div/div/div/div[2]/div/div/input',
     timesheetViewButton: 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/form/div[2]/button',
     pendingActionViewButton: 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div[1]/div/div[3]/div/button',
     timesheetDetails: '//*[@id="app"]/div[1]/div[2]/div[2]/div',
+    recordsMessage: 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span',
 };
 
-Given('I open the login page', { timeout: 30000 }, async () => {
+Given('I open the login page for timesheet management', { timeout: 30000 }, async () => {
     browser = await chromium.launch({ headless: false });
     const context = await browser.newContext();
     page = await context.newPage();
@@ -26,21 +27,21 @@ Given('I open the login page', { timeout: 30000 }, async () => {
     await page.waitForSelector(selectors.usernameInput);
 });
 
-When('I enter username {string} and password {string}', async (username, password) => {
+When('I enter username {string} and password {string} for timesheet management', async (username, password) => {
     await page.fill(selectors.usernameInput, username);
     await page.fill(selectors.passwordInput, password);
 });
 
-When('I click the login button', async () => {
+When('I click the login button for timesheet management', async () => {
     await page.click(selectors.loginButton);
 });
 
-When('I navigate to Time module', async () => {
+When('I navigate to Time module for timesheet management', async () => {
     await page.waitForSelector(selectors.timeModule);
     await page.click(selectors.timeModule);
 });
 
-When('I search for employee {string} in the timesheet search bar', async (employeeName) => {
+When('I search and select employee name {string} in the timesheet search bar', async (employeeName) => {
     await page.waitForSelector(selectors.timesheetSearchBar, { timeout: 10000 });
     await page.fill(selectors.timesheetSearchBar, employeeName);
 
@@ -54,10 +55,11 @@ When('I click the view button for the selected employee', async () => {
     await page.click(selectors.timesheetViewButton);
 });
 
-Then('I should see the timesheet details', async () => {
-    await page.waitForSelector(selectors.timesheetDetails, { timeout: 10000 });
-    const isVisible = await page.isVisible(selectors.timesheetDetails);
-    assert.strictEqual(isVisible, true, 'Timesheet details are not visible');
+Then('I should be redirected to the employee\'s timesheet page with a valid URL', { timeout: 20000 }, async () => {
+    await page.waitForTimeout(10000); // Wait for 10 seconds to allow the page to load
+    const url = page.url();
+    console.log(url);
+    assert(url.match(/\/time\/viewTimesheet\/employeeId\/\d+/), 'Expected URL not found');
 });
 
 When('I click the "View" button in the "Timesheets Pending Action" box', async () => {
@@ -65,8 +67,15 @@ When('I click the "View" button in the "Timesheets Pending Action" box', async (
     await page.click(selectors.pendingActionViewButton);
 });
 
-Then('I should see the pending timesheet details', async () => {
-    await page.waitForSelector(selectors.timesheetDetails, { timeout: 10000 });
-    const isVisible = await page.isVisible(selectors.timesheetDetails);
-    assert.strictEqual(isVisible, true, 'Pending timesheet details not visible');
+Then('I should be redirected to the pending timesheet page with a valid URL', { timeout: 20000 }, async () => {
+    await page.waitForTimeout(10000); // Wait for 10 seconds to allow the page to load
+    const url = page.url();
+    console.log(url);
+    assert(url.match(/\/time\/viewTimesheet\/employeeId\/\d+\?startDate=\d{4}-\d{2}-\d{2}/), 'Expected URL not found');
+});
+
+After(async () => {
+    if (browser) {
+        await browser.close();  // Ensure the browser is closed after each scenario
+    }
 });

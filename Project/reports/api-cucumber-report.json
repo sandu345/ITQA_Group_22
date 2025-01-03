@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 6883238
+              "duration": 7467385
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1337291
+              "duration": 2064876
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1245896
+              "duration": 1645633
             }
           },
           {
@@ -58,7 +58,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 98426462
+              "duration": 104898590
             }
           },
           {
@@ -71,7 +71,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1659783
+              "duration": 2552815
             }
           },
           {
@@ -79,7 +79,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1819610
+              "duration": 6495764
             }
           },
           {
@@ -87,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 161351
+              "duration": 421162
             }
           },
           {
@@ -95,7 +95,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 862590
+              "duration": 248236
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1801099
             }
           }
         ],
@@ -114,7 +122,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1000036
+              "duration": 2117553
             }
           },
           {
@@ -127,7 +135,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 999170
+              "duration": 2443241
             }
           },
           {
@@ -140,7 +148,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1222842
+              "duration": 2192902
             }
           },
           {
@@ -158,7 +166,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79755147
+              "duration": 88552149
             }
           },
           {
@@ -176,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5657837
+              "duration": 5482966
             }
           },
           {
@@ -189,7 +197,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 350901
+              "duration": 498359
             }
           },
           {
@@ -202,7 +210,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 779944
+              "duration": 729256
             }
           },
           {
@@ -210,7 +218,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 848010
+              "duration": 871891
             }
           },
           {
@@ -218,7 +226,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 194776
+              "duration": 149231
             }
           },
           {
@@ -226,7 +234,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 964944
+              "duration": 69434
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 696378
             }
           }
         ],
@@ -245,7 +261,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 847589
+              "duration": 880681
             }
           },
           {
@@ -258,7 +274,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 820323
+              "duration": 892045
             }
           },
           {
@@ -271,7 +287,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1159230
+              "duration": 1025376
             }
           },
           {
@@ -289,7 +305,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 78937988
+              "duration": 80248697
             }
           },
           {
@@ -302,7 +318,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 3523712,
+              "duration": 3535139,
               "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/createBook_Hansani.step.js:98:26)"
             }
           },
@@ -311,7 +327,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 817396
+              "duration": 968334
             }
           },
           {
@@ -319,7 +335,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 100670
+              "duration": 87457
             }
           },
           {
@@ -327,7 +343,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 635182
+              "duration": 56466
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 573883
             }
           }
         ],
@@ -346,7 +370,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 814268
+              "duration": 839649
             }
           },
           {
@@ -359,7 +383,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 910008
+              "duration": 935060
             }
           },
           {
@@ -372,7 +396,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1006456
+              "duration": 1205147
             }
           },
           {
@@ -390,7 +414,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 82266797
+              "duration": 101617189
             }
           },
           {
@@ -403,7 +427,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 569539
+              "duration": 338320
             }
           },
           {
@@ -416,7 +440,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1865641
+              "duration": 1723001
             }
           },
           {
@@ -424,7 +448,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 692006
+              "duration": 894300
             }
           },
           {
@@ -432,7 +456,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 56219
+              "duration": 77070
             }
           },
           {
@@ -440,7 +464,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 555575
+              "duration": 69060
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 712851
             }
           }
         ],
@@ -459,7 +491,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 788002
+              "duration": 823349
             }
           },
           {
@@ -472,7 +504,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 702622
+              "duration": 1000821
             }
           },
           {
@@ -485,7 +517,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 761602
+              "duration": 898729
             }
           },
           {
@@ -503,7 +535,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 78709785
+              "duration": 80878107
             }
           },
           {
@@ -521,7 +553,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4987303
+              "duration": 4821919
             }
           },
           {
@@ -534,7 +566,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 873776,
+              "duration": 856403,
               "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/createBook_Hansani.step.js:98:26)"
             }
           },
@@ -543,7 +575,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 767205
+              "duration": 631096
             }
           },
           {
@@ -551,7 +583,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 74859
+              "duration": 48356
             }
           },
           {
@@ -559,7 +591,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 604961
+              "duration": 33813
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 527727
             }
           }
         ],
@@ -589,7 +629,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 670821
+              "duration": 699157
             }
           },
           {
@@ -602,7 +642,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 197253
+              "duration": 166621
             }
           },
           {
@@ -615,7 +655,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 86591654
+              "duration": 90627591
             }
           },
           {
@@ -628,7 +668,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 616583
+              "duration": 561221
             }
           },
           {
@@ -636,7 +676,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 666486
+              "duration": 548299
             }
           },
           {
@@ -644,7 +684,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 45871
+              "duration": 34774
             }
           },
           {
@@ -652,7 +692,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 863065
+              "duration": 29335
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 823977
             }
           }
         ],
@@ -671,7 +719,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 683151
+              "duration": 567585
             }
           },
           {
@@ -684,7 +732,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 111099
+              "duration": 96602
             }
           },
           {
@@ -697,7 +745,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 77801917
+              "duration": 80627950
             }
           },
           {
@@ -710,7 +758,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1100684,
+              "duration": 1011254,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
             }
           },
@@ -719,7 +767,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 616395
+              "duration": 589568
             }
           },
           {
@@ -727,7 +775,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 42439
+              "duration": 47764
             }
           },
           {
@@ -735,7 +783,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 380697
+              "duration": 40770
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 346285
             }
           }
         ],
@@ -754,7 +810,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 815153
+              "duration": 792503
             }
           },
           {
@@ -767,7 +823,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 147821
+              "duration": 125707
             }
           },
           {
@@ -780,7 +836,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 77304699
+              "duration": 84824598
             }
           },
           {
@@ -793,7 +849,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 282705,
+              "duration": 769827,
               "error_message": "AssertionError\n    + expected - actual\n\n    -201\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
             }
           },
@@ -802,7 +858,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 604758
+              "duration": 1299177
             }
           },
           {
@@ -810,7 +866,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 41496
+              "duration": 98018
             }
           },
           {
@@ -818,7 +874,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 363708
+              "duration": 76886
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 866253
             }
           }
         ],
@@ -837,7 +901,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 574264
+              "duration": 1067853
             }
           },
           {
@@ -850,7 +914,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 115776
+              "duration": 209178
             }
           },
           {
@@ -863,7 +927,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76030538
+              "duration": 87155780
             }
           },
           {
@@ -876,7 +940,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 286835,
+              "duration": 382686,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
             }
           },
@@ -885,7 +949,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 585563
+              "duration": 545149
             }
           },
           {
@@ -893,7 +957,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 42752
+              "duration": 35728
             }
           },
           {
@@ -901,7 +965,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 358565
+              "duration": 28962
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 371078
             }
           }
         ],
@@ -920,7 +992,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 659767
+              "duration": 627376
             }
           },
           {
@@ -933,7 +1005,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 128487
+              "duration": 139176
             }
           },
           {
@@ -946,7 +1018,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75497165
+              "duration": 76711127
             }
           },
           {
@@ -959,7 +1031,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 200999
+              "duration": 144782
             }
           },
           {
@@ -967,7 +1039,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 607479
+              "duration": 562202
             }
           },
           {
@@ -975,7 +1047,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 47978
+              "duration": 33690
             }
           },
           {
@@ -983,7 +1055,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 417948
+              "duration": 28340
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 358416
             }
           }
         ],
@@ -997,6 +1077,393 @@
     "name": "Create a new book",
     "tags": [],
     "uri": "src/api/features/createBook_Wathsalya.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "delete-book;successfully-delete-a-book-with-a-valid-id",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "Successfully delete a book with a valid ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 571178
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "I am an authorized user",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 284908
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I send a DELETE request to \"/api/books/1\"",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110142594
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should receive a response with status code 200",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:55"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1038899,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/delete_book_Shannon.step.js:59:33)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "the response body should confirm successful deletion",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:62"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 843961
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 62564
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 54390
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 618192
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "delete-book;attempt-to-delete-a-nonexistent-book",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Attempt to delete a nonexistent book",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 939039
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am an authorized user",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 263322
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I send a DELETE request to \"/api/books/999999\"",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 112379439
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should receive a response with status code 404",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:55"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 661423,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/delete_book_Shannon.step.js:59:33)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 793663
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 48780
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 39712
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 535189
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "delete-book;unauthorized-user-attempts-to-delete-a-book",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Unauthorized user attempts to delete a book",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 788746
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am an unauthorized user",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 276066
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I send a DELETE request to \"/api/books/2\"",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 111832995
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should receive a response with status code 401",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:55"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 463162
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 917319
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 65591
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 50615
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 590808
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "delete-book;user-role-cannot-delete-a-book",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "User role cannot delete a book",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 863776
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am a user with role \"user\"",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 398743
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I send a DELETE request to \"/api/books/2\"",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 222598369
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should receive a response with status code 403",
+            "match": {
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:55"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 708508,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/delete_book_Shannon.step.js:59:33)"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 683856
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 62143
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 45121
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 633430
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "delete-book",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Delete Book",
+    "tags": [],
+    "uri": "src/api/features/deleteBook_Shannon.feature"
   },
   {
     "description": "  As a library system user\n  I want to access the book list with proper authorization\n  So that I can view books securely",
@@ -1013,7 +1480,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 641873
+              "duration": 893913
             }
           },
           {
@@ -1026,7 +1493,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 125849
+              "duration": 193760
             }
           },
           {
@@ -1039,7 +1506,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 712264
+              "duration": 1433538
             }
           },
           {
@@ -1052,7 +1519,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 102219
+              "duration": 147827
             }
           },
           {
@@ -1065,7 +1532,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 80885689
+              "duration": 117450498
             }
           },
           {
@@ -1078,7 +1545,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 195580
+              "duration": 290054
             }
           },
           {
@@ -1091,7 +1558,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1794593
+              "duration": 2531267
             }
           },
           {
@@ -1099,7 +1566,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 524423
+              "duration": 1112264
             }
           },
           {
@@ -1107,7 +1574,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 609177
+              "duration": 996268
             }
           },
           {
@@ -1115,7 +1582,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 379371
+              "duration": 91651
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 828414
             }
           }
         ],
@@ -1134,7 +1609,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 511856
+              "duration": 1095784
             }
           },
           {
@@ -1147,7 +1622,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 65104
+              "duration": 155032
             }
           },
           {
@@ -1160,7 +1635,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 584321
+              "duration": 1195847
             }
           },
           {
@@ -1173,7 +1648,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 105457
+              "duration": 159192
             }
           },
           {
@@ -1186,7 +1661,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 77730248
+              "duration": 116931787
             }
           },
           {
@@ -1199,7 +1674,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 125213
+              "duration": 163947
             }
           },
           {
@@ -1212,8 +1687,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 883462,
-              "error_message": "AssertionError\n    + expected - actual\n\n    -248\n    +0\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getAllBooks_Sanduni.step.js:59:29)"
+              "duration": 1267961,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -257\n    +0\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getAllBooks_Sanduni.step.js:59:29)"
             }
           },
           {
@@ -1221,7 +1696,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 511903
+              "duration": 725014
             }
           },
           {
@@ -1229,7 +1704,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 470072
+              "duration": 661938
             }
           },
           {
@@ -1237,7 +1712,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 341053
+              "duration": 59048
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 491535
             }
           }
         ],
@@ -1256,7 +1739,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 588821
+              "duration": 744181
             }
           },
           {
@@ -1269,7 +1752,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 69030
+              "duration": 100702
             }
           },
           {
@@ -1282,7 +1765,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 597171
+              "duration": 823620
             }
           },
           {
@@ -1295,7 +1778,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 57170
+              "duration": 78426
             }
           },
           {
@@ -1308,7 +1791,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3415549
+              "duration": 3976388
             }
           },
           {
@@ -1321,7 +1804,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 155085
+              "duration": 205004
             }
           },
           {
@@ -1329,7 +1812,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 587671
+              "duration": 781466
             }
           },
           {
@@ -1337,7 +1820,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 463940
+              "duration": 585162
             }
           },
           {
@@ -1345,7 +1828,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 464226
+              "duration": 48603
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 467654
             }
           }
         ],
@@ -1364,7 +1855,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 632311
+              "duration": 1153923
             }
           },
           {
@@ -1377,7 +1868,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 93955
+              "duration": 129199
             }
           },
           {
@@ -1390,7 +1881,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 577334
+              "duration": 1079476
             }
           },
           {
@@ -1403,7 +1894,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 96737
+              "duration": 130200
             }
           },
           {
@@ -1416,7 +1907,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2963944
+              "duration": 4662323
             }
           },
           {
@@ -1429,7 +1920,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 153489
+              "duration": 246404
             }
           },
           {
@@ -1437,7 +1928,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 562038
+              "duration": 857226
             }
           },
           {
@@ -1445,7 +1936,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 424113
+              "duration": 766020
             }
           },
           {
@@ -1453,7 +1944,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 426494
+              "duration": 61674
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 632027
             }
           }
         ],
@@ -1483,7 +1982,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 565675
+              "duration": 887714
             }
           },
           {
@@ -1496,7 +1995,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 157607
+              "duration": 195606
             }
           },
           {
@@ -1509,7 +2008,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 81838846
+              "duration": 113511649
             }
           },
           {
@@ -1522,7 +2021,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 197674
+              "duration": 190756
             }
           },
           {
@@ -1535,7 +2034,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 783805
+              "duration": 1069023
             }
           },
           {
@@ -1543,7 +2042,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 501611
+              "duration": 693408
             }
           },
           {
@@ -1551,7 +2050,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 389466
+              "duration": 542528
             }
           },
           {
@@ -1559,7 +2058,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 422884
+              "duration": 47385
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 476870
             }
           }
         ],
@@ -1578,7 +2085,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 574784
+              "duration": 722929
             }
           },
           {
@@ -1591,7 +2098,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 90232
+              "duration": 104045
             }
           },
           {
@@ -1604,7 +2111,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 77446189
+              "duration": 110652010
             }
           },
           {
@@ -1617,7 +2124,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 89762
+              "duration": 153639
             }
           },
           {
@@ -1625,7 +2132,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 474727
+              "duration": 727844
             }
           },
           {
@@ -1633,7 +2140,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 303660
+              "duration": 543993
             }
           },
           {
@@ -1641,7 +2148,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 298721
+              "duration": 48505
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 425752
             }
           }
         ],
@@ -1660,7 +2175,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 509491
+              "duration": 726298
             }
           },
           {
@@ -1673,7 +2188,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76056
+              "duration": 122443
             }
           },
           {
@@ -1686,7 +2201,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2713749
+              "duration": 3878332
             }
           },
           {
@@ -1699,7 +2214,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 101949
+              "duration": 141654
             }
           },
           {
@@ -1707,7 +2222,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 480096
+              "duration": 770691
             }
           },
           {
@@ -1715,7 +2230,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 357481
+              "duration": 445263
             }
           },
           {
@@ -1723,7 +2238,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 280301
+              "duration": 46220
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 425616
             }
           }
         ],
@@ -1742,7 +2265,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 456376
+              "duration": 847866
             }
           },
           {
@@ -1755,7 +2278,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 62996
+              "duration": 134565
             }
           },
           {
@@ -1768,7 +2291,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75682140
+              "duration": 114405766
             }
           },
           {
@@ -1781,7 +2304,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 191547,
+              "duration": 235106,
               "error_message": "AssertionError\n    + expected - actual\n\n    -403\n    +200\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getBookByID_Kosala.step.js:50:31)"
             }
           },
@@ -1803,7 +2326,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 486695
+              "duration": 711506
             }
           },
           {
@@ -1811,7 +2334,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 296718
+              "duration": 569851
             }
           },
           {
@@ -1819,7 +2342,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 265308
+              "duration": 53242
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 453618
             }
           }
         ],
@@ -1849,7 +2380,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 453876
+              "duration": 856635
             }
           },
           {
@@ -1862,7 +2393,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75896740
+              "duration": 115294109
             }
           },
           {
@@ -1875,7 +2406,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 74184463
+              "duration": 111010787
             }
           },
           {
@@ -1888,7 +2419,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 159369,
+              "duration": 349715,
               "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +200\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
             }
           },
@@ -1897,7 +2428,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 925637
+              "duration": 2076207
             }
           },
           {
@@ -1905,7 +2436,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 306678
+              "duration": 682531
             }
           },
           {
@@ -1913,7 +2444,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 283620
+              "duration": 75387
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 608256
             }
           }
         ],
@@ -1932,7 +2471,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 466579
+              "duration": 923193
             }
           },
           {
@@ -1945,7 +2484,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 107809
+              "duration": 167984
             }
           },
           {
@@ -1958,7 +2497,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75101954
+              "duration": 100309647
             }
           },
           {
@@ -1971,7 +2510,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 201405,
+              "duration": 277201,
               "error_message": "AssertionError\n    + expected - actual\n\n    -400\n    +404\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
             }
           },
@@ -1980,7 +2519,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 610387
+              "duration": 1149683
             }
           },
           {
@@ -1988,7 +2527,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 338623
+              "duration": 671489
             }
           },
           {
@@ -1996,7 +2535,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 292798
+              "duration": 99102
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 597122
             }
           }
         ],
@@ -2015,7 +2562,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 497569
+              "duration": 925784
             }
           },
           {
@@ -2028,7 +2575,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 75200830
+              "duration": 108215645
             }
           },
           {
@@ -2041,7 +2588,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 74694609
+              "duration": 107185809
             }
           },
           {
@@ -2054,7 +2601,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 154465
+              "duration": 146867
             }
           },
           {
@@ -2062,7 +2609,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 834922
+              "duration": 1174561
             }
           },
           {
@@ -2070,7 +2617,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 486948
+              "duration": 644687
             }
           },
           {
@@ -2078,7 +2625,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 518271
+              "duration": 78931
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 614868
             }
           }
         ],
@@ -2097,7 +2652,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 709287
+              "duration": 924344
             }
           },
           {
@@ -2110,7 +2665,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76025360
+              "duration": 110819959
             }
           },
           {
@@ -2123,7 +2678,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76977292
+              "duration": 110114460
             }
           },
           {
@@ -2136,7 +2691,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 106344
+              "duration": 119371
             }
           },
           {
@@ -2144,7 +2699,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 788893
+              "duration": 876367
             }
           },
           {
@@ -2152,7 +2707,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 314249
+              "duration": 473190
             }
           },
           {
@@ -2160,7 +2715,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 296327
+              "duration": 54457
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 428887
             }
           }
         ],
@@ -2179,7 +2742,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 493199
+              "duration": 705251
             }
           },
           {
@@ -2192,7 +2755,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76963203
+              "duration": 107622849
             }
           },
           {
@@ -2205,7 +2768,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 153794
+              "duration": 154826
             }
           },
           {
@@ -2218,7 +2781,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 76068056
+              "duration": 100959049
             }
           },
           {
@@ -2231,7 +2794,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 119646
+              "duration": 136926
             }
           },
           {
@@ -2239,7 +2802,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 574223
+              "duration": 638328
             }
           },
           {
@@ -2247,7 +2810,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 296862
+              "duration": 443666
             }
           },
           {
@@ -2255,7 +2818,15 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 270514
+              "duration": 43279
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 382873
             }
           }
         ],

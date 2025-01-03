@@ -19,9 +19,7 @@ Feature: Manage Vacancies
     Given I am logged in as an admin user for manageVacancies
     And I select the recruitment tab for manageVacancies
     When I navigate to the vacancies page for manageVacancies
-    And I select job title "Account Assistant" for manageVacancies
-    And I select vacancy "test" for manageVacancies
-    And I select hiring manager "Rahul Patil" for manageVacancies
+    And I select job title "Payroll Administrator" for manageVacancies
     And I select status "Active" for manageVacancies
     And I click the search button for manageVacancies
     Then I should see the vacancies in the list or a message indicating there are no records to show for manageVacancies
