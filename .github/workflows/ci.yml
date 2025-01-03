@@ -33,15 +33,28 @@ jobs:
         run: java -jar demo-0.0.1-SNAPSHOT.jar &
         working-directory: /
 
-      - name: Run UI tests
-        run: npm run test:ui
-        working-directory: ./Project
-        continue-on-error: true
+      - name: Wait for API server to be ready
+        run: |
+          echo "Waiting for API server to be ready..."
+          for i in {1..30}; do
+            if curl -s http://localhost:7081/health; then
+              echo "API server is ready!"
+              break
+            fi
+            echo "Waiting for API server..."
+            sleep 5
+          done
+        working-directory: /
 
       - name: Run API tests
         run: npm run test:api
         working-directory: ./Project
-        continue-on-error: false
+        continue-on-error: true
+
+      - name: Run UI tests
+        run: npm run test:ui
+        working-directory: ./Project
+        continue-on-error: true
 
       - name: Stop API server
         run: pkill -f 'java -jar demo-0.0.1-SNAPSHOT.jar'

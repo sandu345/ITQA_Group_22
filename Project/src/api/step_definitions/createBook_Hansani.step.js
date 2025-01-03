@@ -1,5 +1,6 @@
-const { Given, When, Then, After } = require('@cucumber/cucumber');
-const { request, expect } = require('@playwright/test');
+const { Given, When, Then, Before, After, setDefaultTimeout } = require('@cucumber/cucumber');
+const { request } = require('playwright');
+const { expect } = require('@playwright/test');
 
 // Constants
 const HTTP_HEADERS = {
@@ -46,6 +47,29 @@ const getCurrentDateTime = () => {
     return now.toISOString().replace(/[-:.]/g, '');
 };
 
+setDefaultTimeout(60000); // Set default timeout to 60 seconds
+
+let apiContext;
+
+Before(async function () {
+    apiContext = await request.newContext({
+        baseURL: 'http://localhost:7081',
+        extraHTTPHeaders: {
+            'Authorization': 'Basic dXNlcjpwYXNzd29yZA==',
+            'Content-Type': 'application/json'
+        }
+    });
+});
+
+After(async function () {
+    await apiContext.dispose();
+});
+
+Given('the API server is running', async function () {
+    const response = await apiContext.get('/health');
+    expect(response.ok()).toBeTruthy();
+});
+
 // Step definitions
 Given('the API endpoint is {string}', async function(endpoint) {
     context.baseURL = endpoint;
@@ -87,6 +111,16 @@ When('I send a POST request to {string} with body:', async function(endpoint, bo
     }
 });
 
+When('I create a new book with title {string} and author {string}', async function (title, author) {
+    const response = await apiContext.post('/api/books', {
+        data: {
+            title: title,
+            author: author
+        }
+    });
+    this.response = response;
+});
+
 Then('the response status code should be {int}', async function(expectedStatus) {
     if (!context.lastResponse) {
         throw new Error('No API response received');
@@ -108,6 +142,13 @@ Then('the response should contain an auto-generated id', async function() {
     const responseBody = await context.lastResponse.json().catch(() => context.lastResponse.text());
     expect(responseBody).toHaveProperty('id');
     expect(responseBody.id).toBeTruthy();
+});
+
+Then('the book should be created successfully', async function () {
+    expect(this.response.status()).toBe(201);
+    const responseBody = await this.response.json();
+    expect(responseBody.title).toBe(this.title);
+    expect(responseBody.author).toBe(this.author);
 });
 
 After(async function() {
