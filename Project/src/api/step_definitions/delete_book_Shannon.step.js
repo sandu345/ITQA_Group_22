@@ -1,70 +1,60 @@
 const { Given, When, Then, After } = require('@cucumber/cucumber');
-const { expect } = require('@playwright/test');
-const axios = require('axios');
-
-let lastResponse;
-let apiContext;
-
-const baseURL = 'http://localhost:7081';
+const { request, expect } = require('@playwright/test');
+const { BASE_URL, context, createAuthHeader } = require('./consts');
 
 Given('I am an authorized user', async function () {
-    apiContext = axios.create({
-        baseURL,
-        auth: {
-            username: 'admin',
-            password: 'password'
-        }
-    });
+   context.apiContext = await request.newContext({
+      baseURL: BASE_URL,
+      extraHTTPHeaders: {
+         'Authorization': createAuthHeader('admin', 'password')
+      }
+   });
 });
 
 Given('I am an unauthorized user', async function () {
-    apiContext = axios.create({
-        baseURL,
-        auth: {
-            username: 'random',
-            password: 'password'
-        }
-    });
+   context.apiContext = await request.newContext({
+      baseURL: BASE_URL,
+      extraHTTPHeaders: {
+         'Authorization': createAuthHeader('random', 'password')
+      }
+   });
 });
 
 Given('I am a user with role {string}', async function (role) {
-    const username = role === 'admin' ? 'admin' : 'user';
-    apiContext = axios.create({
-        baseURL,
-        auth: {
-            username,
-            password: 'password'
-        }
-    });
+   const username = role === 'admin' ? 'admin' : 'user';
+   context.apiContext = await request.newContext({
+      baseURL: BASE_URL,
+      extraHTTPHeaders: {
+         'Authorization': createAuthHeader(username, 'password')
+      }
+   });
 });
 
 When('I send a DELETE request to {string}', async function (endpoint) {
-    try {
-        lastResponse = await apiContext.delete(endpoint);
-    } catch (error) {
-        console.error('Request failed:', error);
-        lastResponse = {
-            status: error.response?.status || 500,
-            data: error.response?.data || {}
-        };
-    }
-    console.log('Response status:', lastResponse.status);
-    console.log('Response data:', lastResponse.data);
+   try {
+      context.lastResponse = await context.apiContext.delete(endpoint);
+   } catch (error) {
+      context.lastResponse = {
+         status: error.response?.status || 500,
+         data: error.response?.data || {}
+      };
+   }
 });
 
 Then('I should receive a response with status code {int}', async function (expectedStatus) {
-    if (!lastResponse) {
-        throw new Error('No response received from the API');
-    }
-    expect(lastResponse.status).toBe(expectedStatus);
+   if (!context.lastResponse) {
+      throw new Error('No response received from the API');
+   }
+   expect(context.lastResponse.status()).toBe(expectedStatus);
 });
 
 Then('the response body should confirm successful deletion', async function () {
-    const responseBody = lastResponse.data;
-    expect(responseBody).toHaveProperty('message', 'Book deleted successfully');
-    console.log('Deletion confirmed with message:', responseBody.message);
+   const responseBody = await context.lastResponse.json();
+   expect(responseBody).toHaveProperty('message', 'Book deleted successfully');
 });
 
 After(async function () {
-    lastResponse = null;
+   if (context.apiContext) {
+      await context.apiContext.dispose();
+   }
 });
