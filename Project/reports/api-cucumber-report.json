@@ -1,10 +1,10 @@
 [
   {
-    "description": "",
+    "description": "  As an admin user\n  I want to create books\n  So that I can manage the book inventory",
     "elements": [
       {
         "description": "",
-        "id": "book-api-testing;verify-user-role-cannot-create-a-book",
+        "id": "create-book;verify-user-role-cannot-create-a-book",
         "keyword": "Scenario",
         "line": 6,
         "name": "Verify user role cannot create a book",
@@ -14,64 +14,64 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8177195
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "the API endpoint is \"http://localhost:7081\"",
-            "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2695533
+              "duration": 7377380
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "I am authenticated as \"user\" with password \"password\"",
+            "name": "the API endpoint is \"http://localhost:7081\"",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1737700
+              "duration": 1515316
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I am authenticated as \"user\" with password \"password\"",
+            "match": {
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1350814
             }
           },
           {
             "arguments": [
               {
                 "content": "{\n  \"title\": \"Hansima {datetime}\",\n  \"author\": \"My Lord\"\n}",
-                "line": 9
+                "line": 10
               }
             ],
             "keyword": "When ",
-            "line": 8,
+            "line": 9,
             "name": "I send a POST request to \"/api/books\" with body:",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 116440670
+              "duration": 98590773
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 15,
-            "name": "the response status code should be 201",
+            "line": 16,
+            "name": "the response status code for createBook should be 201",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 1958610
+              "duration": 1643401
             }
           },
           {
@@ -79,7 +79,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1893505
+              "duration": 1742101
             }
           },
           {
@@ -87,7 +87,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 265261
+              "duration": 1132198
             }
           },
           {
@@ -95,7 +95,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 155888
+              "duration": 671646
             }
           },
           {
@@ -103,7 +103,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 998093
+              "duration": 749518
             }
           }
         ],
@@ -112,9 +112,9 @@
       },
       {
         "description": "",
-        "id": "book-api-testing;verify-unique-ids-are-generated",
+        "id": "create-book;verify-unique-ids-are-generated",
         "keyword": "Scenario",
-        "line": 17,
+        "line": 18,
         "name": "Verify unique IDs are generated",
         "steps": [
           {
@@ -122,95 +122,95 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1134975
+              "duration": 1165895
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 19,
             "name": "the API endpoint is \"http://localhost:7081\"",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1330182
+              "duration": 1110734
             }
           },
           {
             "arguments": [],
-            "keyword": "Given ",
-            "line": 18,
+            "keyword": "And ",
+            "line": 20,
             "name": "I am authenticated as \"admin\" with password \"password\"",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 1364162
+              "duration": 1111276
             }
           },
           {
             "arguments": [
               {
                 "content": "{\n  \"title\": \"H.M.Nish {datetime}\",\n  \"author\": \"The Story\"\n}",
-                "line": 20
+                "line": 22
               }
             ],
             "keyword": "When ",
-            "line": 19,
+            "line": 21,
             "name": "I send a POST request to \"/api/books\" with body:",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 90055471
+              "duration": 79090232
             }
           },
           {
             "arguments": [
               {
                 "content": "{\n  \"title\": \"N.S.Niluk {datetime}\",\n  \"author\": \"Harry\"\n}",
-                "line": 27
+                "line": 29
               }
             ],
             "keyword": "And ",
-            "line": 26,
+            "line": 28,
             "name": "I send a POST request to \"/api/books\" with body:",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 15468558
+              "duration": 5009299
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 33,
-            "name": "the response status code should be 201",
+            "line": 35,
+            "name": "the response status code for createBook should be 201",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 2011471
+              "duration": 554240
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 34,
+            "line": 36,
             "name": "both books should have different IDs",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:101"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:61"
             },
             "result": {
               "status": "passed",
-              "duration": 3247962
+              "duration": 902113
             }
           },
           {
@@ -218,7 +218,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 12976479
+              "duration": 4434848
             }
           },
           {
@@ -226,7 +226,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 371096
+              "duration": 1324139
             }
           },
           {
@@ -234,7 +234,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 293994
+              "duration": 1190582
             }
           },
           {
@@ -242,7 +242,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2987489
+              "duration": 1356083
             }
           }
         ],
@@ -251,9 +251,9 @@
       },
       {
         "description": "",
-        "id": "book-api-testing;verify-error-for-non-string-title-or-author",
-        "keyword": "Scenario Outline",
-        "line": 36,
+        "id": "create-book;verify-error-for-non-string-title-or-author",
+        "keyword": "Scenario",
+        "line": 38,
         "name": "Verify error for non-string title or author",
         "steps": [
           {
@@ -261,65 +261,65 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2767437
+              "duration": 1491071
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 39,
             "name": "the API endpoint is \"http://localhost:7081\"",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 3694333
+              "duration": 1381799
             }
           },
           {
             "arguments": [],
-            "keyword": "Given ",
-            "line": 37,
+            "keyword": "And ",
+            "line": 40,
             "name": "I am authenticated as \"admin\" with password \"password\"",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 2080999
+              "duration": 1767431
             }
           },
           {
             "arguments": [
               {
                 "content": "{\n  \"title\": 46416416,\n  \"author\": 5616536\n}",
-                "line": 39
+                "line": 42
               }
             ],
             "keyword": "When ",
-            "line": 38,
+            "line": 41,
             "name": "I send a POST request to \"/api/books\" with body:",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 90697372
+              "duration": 81118944
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 45,
-            "name": "the response status code should be 400",
+            "line": 48,
+            "name": "the response status code for createBook should be 400",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:53"
             },
             "result": {
               "status": "failed",
-              "duration": 5133309,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/createBook_Hansani.step.js:98:26)"
+              "duration": 1960954,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/createBook_Hansani.step.js:58:25)"
             }
           },
           {
@@ -327,7 +327,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 971136
+              "duration": 587093
             }
           },
           {
@@ -335,7 +335,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 94749
+              "duration": 385273
             }
           },
           {
@@ -343,7 +343,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 85051
+              "duration": 349281
             }
           },
           {
@@ -351,7 +351,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 818047
+              "duration": 419771
             }
           }
         ],
@@ -360,9 +360,9 @@
       },
       {
         "description": "",
-        "id": "book-api-testing;verify-book-creation-without-id-field",
+        "id": "create-book;verify-book-creation-without-id-field",
         "keyword": "Scenario",
-        "line": 47,
+        "line": 50,
         "name": "Verify book creation without id field",
         "steps": [
           {
@@ -370,77 +370,77 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 986670
+              "duration": 696539
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 51,
             "name": "the API endpoint is \"http://localhost:7081\"",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 802026
+              "duration": 675613
             }
           },
           {
             "arguments": [],
-            "keyword": "Given ",
-            "line": 48,
+            "keyword": "And ",
+            "line": 52,
             "name": "I am authenticated as \"admin\" with password \"password\"",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 944013
+              "duration": 795949
             }
           },
           {
             "arguments": [
               {
                 "content": "{\n  \"title\": \"Test Book Without ID {datetime}\",\n  \"author\": \"Test Author\"\n}",
-                "line": 50
+                "line": 54
               }
             ],
             "keyword": "When ",
-            "line": 49,
+            "line": 53,
             "name": "I send a POST request to \"/api/books\" with body:",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 83679362
+              "duration": 77311952
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 56,
-            "name": "the response status code should be 201",
+            "line": 60,
+            "name": "the response status code for createBook should be 201",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 367169
+              "duration": 277262
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 57,
+            "line": 61,
             "name": "the response should contain an auto-generated id",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:107"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 1575549
+              "duration": 1410677
             }
           },
           {
@@ -448,7 +448,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1240550
+              "duration": 759611
             }
           },
           {
@@ -456,7 +456,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 62121
+              "duration": 348318
             }
           },
           {
@@ -464,7 +464,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 77181
+              "duration": 354685
             }
           },
           {
@@ -472,7 +472,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 925207
+              "duration": 299330
             }
           }
         ],
@@ -481,9 +481,9 @@
       },
       {
         "description": "",
-        "id": "book-api-testing;verify-error-when-creating-book-with-duplicate-id",
+        "id": "create-book;verify-error-when-creating-book-with-duplicate-id",
         "keyword": "Scenario",
-        "line": 59,
+        "line": 63,
         "name": "Verify error when creating book with duplicate ID",
         "steps": [
           {
@@ -491,83 +491,83 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 861997
+              "duration": 633933
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 64,
             "name": "the API endpoint is \"http://localhost:7081\"",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:50"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1356681
+              "duration": 626015
             }
           },
           {
             "arguments": [],
-            "keyword": "Given ",
-            "line": 60,
+            "keyword": "And ",
+            "line": 65,
             "name": "I am authenticated as \"admin\" with password \"password\"",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:55"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 784465
+              "duration": 673592
             }
           },
           {
             "arguments": [
               {
                 "content": "{\n  \"id\": \"1234\",\n  \"title\": \"Original Book\",\n  \"author\": \"Original Author\"\n}",
-                "line": 62
+                "line": 67
               }
             ],
             "keyword": "When ",
-            "line": 61,
+            "line": 66,
             "name": "I send a POST request to \"/api/books\" with body:",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 83311674
+              "duration": 78080872
             }
           },
           {
             "arguments": [
               {
                 "content": "{\n  \"id\": \"1234\",\n  \"title\": \"Another Book\",\n  \"author\": \"Another Author\"\n}",
-                "line": 70
+                "line": 75
               }
             ],
             "keyword": "And ",
-            "line": 69,
+            "line": 74,
             "name": "I send a POST request to \"/api/books\" with body:",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:65"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:29"
             },
             "result": {
               "status": "passed",
-              "duration": 4897257
+              "duration": 4410212
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 77,
-            "name": "the response status code should be 400",
+            "line": 82,
+            "name": "the response status code for createBook should be 400",
             "match": {
-              "location": "src/api/step_definitions/createBook_Hansani.step.js:90"
+              "location": "src/api/step_definitions/createBook_Hansani.step.js:53"
             },
             "result": {
               "status": "failed",
-              "duration": 854933,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/createBook_Hansani.step.js:98:26)"
+              "duration": 550320,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m208\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/createBook_Hansani.step.js:58:25)"
             }
           },
           {
@@ -575,7 +575,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 904573
+              "duration": 648652
             }
           },
           {
@@ -583,7 +583,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 43798
+              "duration": 405002
             }
           },
           {
@@ -591,7 +591,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 36157
+              "duration": 363109
             }
           },
           {
@@ -599,7 +599,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 587162
+              "duration": 380043
             }
           }
         ],
@@ -607,10 +607,10 @@
         "type": "scenario"
       }
     ],
-    "id": "book-api-testing",
+    "id": "create-book",
     "line": 1,
     "keyword": "Feature",
-    "name": "Book API Testing",
+    "name": "Create Book",
     "tags": [],
     "uri": "src/api/features/createBook_Hansani.feature"
   },
@@ -629,7 +629,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 776738
+              "duration": 681901
             }
           },
           {
@@ -638,11 +638,11 @@
             "line": 4,
             "name": "I have valid book data",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:8"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 223670
+              "duration": 157754
             }
           },
           {
@@ -651,11 +651,11 @@
             "line": 5,
             "name": "I send a POST request to \"/api/books\" with the valid data",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 130010232
+              "duration": 92541054
             }
           },
           {
@@ -668,7 +668,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1201776
+              "duration": 566641
             }
           },
           {
@@ -676,7 +676,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1385704
+              "duration": 618177
             }
           },
           {
@@ -684,7 +684,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 74140
+              "duration": 362166
             }
           },
           {
@@ -692,7 +692,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 79559
+              "duration": 338257
             }
           },
           {
@@ -700,7 +700,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1639494
+              "duration": 329915
             }
           }
         ],
@@ -719,7 +719,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1218327
+              "duration": 586132
             }
           },
           {
@@ -728,11 +728,11 @@
             "line": 9,
             "name": "I have invalid book data without title",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:19"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 237775
+              "duration": 111323
             }
           },
           {
@@ -741,11 +741,11 @@
             "line": 10,
             "name": "I send a POST request to \"/api/books\" with the invalid data",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 104336150
+              "duration": 76241172
             }
           },
           {
@@ -758,7 +758,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1041277,
+              "duration": 1064554,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
             }
           },
@@ -767,7 +767,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 558772
+              "duration": 583685
             }
           },
           {
@@ -775,7 +775,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 35206
+              "duration": 348111
             }
           },
           {
@@ -783,7 +783,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 34689
+              "duration": 326877
             }
           },
           {
@@ -791,7 +791,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 396424
+              "duration": 322853
             }
           }
         ],
@@ -810,7 +810,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 659557
+              "duration": 655007
             }
           },
           {
@@ -819,11 +819,11 @@
             "line": 14,
             "name": "I have invalid book data without author",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:27"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 115597
+              "duration": 142475
             }
           },
           {
@@ -832,11 +832,11 @@
             "line": 15,
             "name": "I send a POST request to \"/api/books\" with the invalid data",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 87097604
+              "duration": 76077688
             }
           },
           {
@@ -849,7 +849,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 236585,
+              "duration": 264570,
               "error_message": "AssertionError\n    + expected - actual\n\n    -201\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
             }
           },
@@ -858,7 +858,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 616064
+              "duration": 516452
             }
           },
           {
@@ -866,7 +866,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 37485
+              "duration": 347561
             }
           },
           {
@@ -874,7 +874,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 27473
+              "duration": 304112
             }
           },
           {
@@ -882,7 +882,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 336205
+              "duration": 298628
             }
           }
         ],
@@ -901,7 +901,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 521021
+              "duration": 500303
             }
           },
           {
@@ -910,11 +910,11 @@
             "line": 19,
             "name": "I have invalid book data without title and author",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:35"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:36"
             },
             "result": {
               "status": "passed",
-              "duration": 108516
+              "duration": 114205
             }
           },
           {
@@ -923,11 +923,11 @@
             "line": 20,
             "name": "I send a POST request to \"/api/books\" with the invalid data",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 76009393
+              "duration": 76189206
             }
           },
           {
@@ -940,7 +940,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 283926,
+              "duration": 283650,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
             }
           },
@@ -949,7 +949,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 548962
+              "duration": 499863
             }
           },
           {
@@ -957,7 +957,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 35818
+              "duration": 325608
             }
           },
           {
@@ -965,7 +965,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 27239
+              "duration": 272152
             }
           },
           {
@@ -973,7 +973,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 356648
+              "duration": 338968
             }
           }
         ],
@@ -992,7 +992,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 586080
+              "duration": 587784
             }
           },
           {
@@ -1001,11 +1001,11 @@
             "line": 24,
             "name": "I have valid book data but invalid credentials",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:43"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:44"
             },
             "result": {
               "status": "passed",
-              "duration": 122632
+              "duration": 128582
             }
           },
           {
@@ -1014,11 +1014,11 @@
             "line": 25,
             "name": "I send a POST request to \"/api/books\" with the valid data",
             "match": {
-              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:54"
+              "location": "src/api/step_definitions/createBook_Wathsalya.step.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 79241184
+              "duration": 81833519
             }
           },
           {
@@ -1031,7 +1031,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 170706
+              "duration": 230015
             }
           },
           {
@@ -1039,7 +1039,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 747063
+              "duration": 905191
             }
           },
           {
@@ -1047,7 +1047,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 44043
+              "duration": 489866
             }
           },
           {
@@ -1055,7 +1055,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 28464
+              "duration": 466181
             }
           },
           {
@@ -1063,7 +1063,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 462333
+              "duration": 438924
             }
           }
         ],
@@ -1093,7 +1093,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 655821
+              "duration": 710904
             }
           },
           {
@@ -1102,11 +1102,11 @@
             "line": 3,
             "name": "I am an authorized user",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:10"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 315323
+              "duration": 813241
             }
           },
           {
@@ -1115,11 +1115,11 @@
             "line": 4,
             "name": "I send a DELETE request to \"/api/books/1\"",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:41"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 86420626
+              "duration": 80198986
             }
           },
           {
@@ -1128,12 +1128,12 @@
             "line": 5,
             "name": "I should receive a response with status code 200",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:55"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:44"
             },
             "result": {
               "status": "failed",
-              "duration": 708832,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/delete_book_Shannon.step.js:59:33)"
+              "duration": 669327,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/delete_book_Shannon.step.js:48:42)"
             }
           },
           {
@@ -1142,7 +1142,7 @@
             "line": 6,
             "name": "the response body should confirm successful deletion",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:62"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:51"
             },
             "result": {
               "status": "skipped",
@@ -1154,7 +1154,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 556139
+              "duration": 616935
             }
           },
           {
@@ -1162,7 +1162,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 49386
+              "duration": 321578
             }
           },
           {
@@ -1170,7 +1170,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 33725
+              "duration": 339273
             }
           },
           {
@@ -1178,7 +1178,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 393354
+              "duration": 384937
             }
           }
         ],
@@ -1197,7 +1197,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 570435
+              "duration": 555347
             }
           },
           {
@@ -1206,11 +1206,11 @@
             "line": 9,
             "name": "I am an authorized user",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:10"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 179323
+              "duration": 606277
             }
           },
           {
@@ -1219,11 +1219,11 @@
             "line": 10,
             "name": "I send a DELETE request to \"/api/books/999999\"",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:41"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 80115065
+              "duration": 76597129
             }
           },
           {
@@ -1232,12 +1232,12 @@
             "line": 11,
             "name": "I should receive a response with status code 404",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:55"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:44"
             },
             "result": {
               "status": "failed",
-              "duration": 586005,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/delete_book_Shannon.step.js:59:33)"
+              "duration": 404119,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/delete_book_Shannon.step.js:48:42)"
             }
           },
           {
@@ -1245,7 +1245,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 758241
+              "duration": 579238
             }
           },
           {
@@ -1253,7 +1253,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 36428
+              "duration": 347802
             }
           },
           {
@@ -1261,7 +1261,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 29166
+              "duration": 304720
             }
           },
           {
@@ -1269,7 +1269,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 341094
+              "duration": 316649
             }
           }
         ],
@@ -1288,7 +1288,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 633835
+              "duration": 485996
             }
           },
           {
@@ -1297,11 +1297,11 @@
             "line": 14,
             "name": "I am an unauthorized user",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:20"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 224020
+              "duration": 626569
             }
           },
           {
@@ -1310,11 +1310,11 @@
             "line": 15,
             "name": "I send a DELETE request to \"/api/books/2\"",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:41"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 86087146
+              "duration": 76144168
             }
           },
           {
@@ -1323,11 +1323,11 @@
             "line": 16,
             "name": "I should receive a response with status code 401",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:55"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:44"
             },
             "result": {
               "status": "passed",
-              "duration": 280969
+              "duration": 350513
             }
           },
           {
@@ -1335,7 +1335,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 615557
+              "duration": 562260
             }
           },
           {
@@ -1343,7 +1343,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 36841
+              "duration": 307119
             }
           },
           {
@@ -1351,7 +1351,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 29803
+              "duration": 340787
             }
           },
           {
@@ -1359,7 +1359,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 356761
+              "duration": 299082
             }
           }
         ],
@@ -1378,7 +1378,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 534245
+              "duration": 534364
             }
           },
           {
@@ -1387,11 +1387,11 @@
             "line": 19,
             "name": "I am a user with role \"user\"",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:30"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:23"
             },
             "result": {
               "status": "passed",
-              "duration": 242326
+              "duration": 807182
             }
           },
           {
@@ -1400,11 +1400,11 @@
             "line": 20,
             "name": "I send a DELETE request to \"/api/books/2\"",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:41"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 87051822
+              "duration": 76771871
             }
           },
           {
@@ -1413,12 +1413,12 @@
             "line": 21,
             "name": "I should receive a response with status code 403",
             "match": {
-              "location": "src/api/step_definitions/delete_book_Shannon.step.js:55"
+              "location": "src/api/step_definitions/delete_book_Shannon.step.js:44"
             },
             "result": {
               "status": "failed",
-              "duration": 594790,
-              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/delete_book_Shannon.step.js:59:33)"
+              "duration": 495257,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/delete_book_Shannon.step.js:48:42)"
             }
           },
           {
@@ -1426,7 +1426,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 617250
+              "duration": 521995
             }
           },
           {
@@ -1434,7 +1434,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 79803
+              "duration": 339494
             }
           },
           {
@@ -1442,7 +1442,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 65798
+              "duration": 282046
             }
           },
           {
@@ -1450,7 +1450,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 547142
+              "duration": 277425
             }
           }
         ],
@@ -1466,13 +1466,13 @@
     "uri": "src/api/features/deleteBook_Shannon.feature"
   },
   {
-    "description": "  As a library system user\n  I want to access the book list with proper authorization\n  So that I can view books securely",
+    "description": "  As a user\n  I want to retrieve all books\n  So that I can view the book inventory",
     "elements": [
       {
         "description": "",
-        "id": "book-api-access-control;authorized-user-can-view-books-when-books-exist",
+        "id": "get-all-books;authorized-user-can-view-books-when-books-exist",
         "keyword": "Scenario",
-        "line": 9,
+        "line": 6,
         "name": "Authorized user can view books when books exist",
         "steps": [
           {
@@ -1480,85 +1480,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 627601
+              "duration": 578258
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 7,
-            "name": "the system is running",
-            "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 149136
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 10,
             "name": "I am logged in as \"user\" user",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:14"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 989091
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "there are books in the system",
-            "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 153440
+              "duration": 625945
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 12,
+            "line": 8,
             "name": "I send GET request to \"/api/books\"",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:37"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 109173935
+              "duration": 78288391
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
+            "line": 9,
             "name": "the response status should be 200",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:41"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:24"
             },
             "result": {
               "status": "passed",
-              "duration": 617557
+              "duration": 469970
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 14,
+            "line": 10,
             "name": "the response should contain the list of books",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:45"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:28"
             },
             "result": {
               "status": "passed",
-              "duration": 2801558
+              "duration": 2309013
             }
           },
           {
@@ -1566,7 +1540,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 757510
+              "duration": 765656
             }
           },
           {
@@ -1574,7 +1548,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 775206
+              "duration": 511926
             }
           },
           {
@@ -1582,7 +1556,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 62006
+              "duration": 473001
             }
           },
           {
@@ -1590,7 +1564,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 625328
+              "duration": 469920
             }
           }
         ],
@@ -1599,9 +1573,9 @@
       },
       {
         "description": "",
-        "id": "book-api-access-control;authorized-user-sees-empty-list-when-no-books-exist",
+        "id": "get-all-books;authorized-user-sees-empty-list-when-no-books-exist",
         "keyword": "Scenario",
-        "line": 16,
+        "line": 12,
         "name": "Authorized user sees empty list when no books exist",
         "steps": [
           {
@@ -1609,86 +1583,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1255400
+              "duration": 797949
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
-            "name": "the system is running",
-            "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:8"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 111373
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 17,
+            "line": 13,
             "name": "I am logged in as \"user\" user",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:14"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 1061466
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "there are no books in the system",
-            "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 241399
+              "duration": 885532
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 19,
+            "line": 14,
             "name": "I send GET request to \"/api/books\"",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:37"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 111819391
+              "duration": 82786960
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 20,
+            "line": 15,
             "name": "the response status should be 200",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:41"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:24"
             },
             "result": {
               "status": "passed",
-              "duration": 238412
+              "duration": 469724
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 21,
+            "line": 16,
             "name": "the response should contain an empty list",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:56"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:39"
             },
             "result": {
-              "status": "failed",
-              "duration": 1702161,
-              "error_message": "AssertionError\n    + expected - actual\n\n    -288\n    +0\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getAllBooks_Sanduni.step.js:59:29)"
+              "status": "passed",
+              "duration": 2302204
             }
           },
           {
@@ -1696,7 +1643,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 967356
+              "duration": 701411
             }
           },
           {
@@ -1704,7 +1651,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 873359
+              "duration": 457008
             }
           },
           {
@@ -1712,7 +1659,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 79169
+              "duration": 427878
             }
           },
           {
@@ -1720,7 +1667,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1052875
+              "duration": 451423
             }
           }
         ],
@@ -1729,9 +1676,9 @@
       },
       {
         "description": "",
-        "id": "book-api-access-control;unauthorized-user-cannot-access-books-when-books-exist",
+        "id": "get-all-books;unauthorized-user-cannot-access-books-when-books-exist",
         "keyword": "Scenario",
-        "line": 23,
+        "line": 18,
         "name": "Unauthorized user cannot access books when books exist",
         "steps": [
           {
@@ -1739,20 +1686,97 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1307057
+              "duration": 686640
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
-            "name": "the system is running",
+            "line": 19,
+            "name": "I am not authenticated",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:8"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 247538
+              "duration": 577647
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I send GET request to \"/api/books\"",
+            "match": {
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2833732
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "the response status should be 401",
+            "match": {
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 294848
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 507060
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 302584
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 286473
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 299746
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-all-books;unauthorized-user-cannot-access-books-when-no-books-exist",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Unauthorized user cannot access books when no books exist",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 498306
             }
           },
           {
@@ -1761,50 +1785,37 @@
             "line": 24,
             "name": "I am not authenticated",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:23"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1730708
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 25,
-            "name": "there are books in the system",
-            "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 167769
+              "duration": 494358
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 26,
+            "line": 25,
             "name": "I send GET request to \"/api/books\"",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:37"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 5828782
+              "duration": 2586577
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 27,
+            "line": 26,
             "name": "the response status should be 401",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:41"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:24"
             },
             "result": {
               "status": "passed",
-              "duration": 223740
+              "duration": 293884
             }
           },
           {
@@ -1812,7 +1823,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1811119
+              "duration": 583529
             }
           },
           {
@@ -1820,7 +1831,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 680496
+              "duration": 311514
             }
           },
           {
@@ -1828,7 +1839,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 48432
+              "duration": 372022
             }
           },
           {
@@ -1836,7 +1847,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 471737
+              "duration": 306755
             }
           }
         ],
@@ -1845,82 +1856,57 @@
       },
       {
         "description": "",
-        "id": "book-api-access-control;unauthorized-user-cannot-access-books-when-no-books-exist",
+        "id": "get-all-books;attempt-to-retrieve-non-existent-book",
         "keyword": "Scenario",
-        "line": 29,
-        "name": "Unauthorized user cannot access books when no books exist",
+        "line": 28,
+        "name": "Attempt to retrieve non-existent book",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1026797
+              "duration": 525693
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
-            "name": "the system is running",
+            "line": 29,
+            "name": "I am logged in as \"user\" user",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:8"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:5"
             },
             "result": {
               "status": "passed",
-              "duration": 99709
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 30,
-            "name": "I am not authenticated",
-            "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:23"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 793752
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 31,
-            "name": "there are no books in the system",
-            "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 113843
+              "duration": 569317
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 32,
-            "name": "I send GET request to \"/api/books\"",
+            "line": 30,
+            "name": "I send a GET request to \"/api/books/99999\"",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:37"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:44"
             },
             "result": {
               "status": "passed",
-              "duration": 4822305
+              "duration": 79942723
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 33,
-            "name": "the response status should be 401",
+            "line": 31,
+            "name": "the response status code for getAllBooks should be 404",
             "match": {
-              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:41"
+              "location": "src/api/step_definitions/getAllBooks_Sanduni.step.js:48"
             },
             "result": {
-              "status": "passed",
-              "duration": 165706
+              "status": "failed",
+              "duration": 516266,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at Proxy.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/node_modules/playwright/lib/matchers/expect.js:227:37)\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getAllBooks_Sanduni.step.js:49:30)"
             }
           },
           {
@@ -1928,7 +1914,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 870714
+              "duration": 509006
             }
           },
           {
@@ -1936,7 +1922,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 624812
+              "duration": 390252
             }
           },
           {
@@ -1944,7 +1930,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50907
+              "duration": 359541
             }
           },
           {
@@ -1952,7 +1938,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 678939
+              "duration": 363841
             }
           }
         ],
@@ -1960,10 +1946,10 @@
         "type": "scenario"
       }
     ],
-    "id": "book-api-access-control",
+    "id": "get-all-books",
     "line": 1,
     "keyword": "Feature",
-    "name": "Book API Access Control",
+    "name": "Get All Books",
     "tags": [],
     "uri": "src/api/features/getAllBooks_Sanduni.feature"
   },
@@ -1982,7 +1968,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 788982
+              "duration": 524977
             }
           },
           {
@@ -1991,11 +1977,11 @@
             "line": 7,
             "name": "I am authenticated as \"admin\" for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:20"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 179857
+              "duration": 154915
             }
           },
           {
@@ -2004,11 +1990,11 @@
             "line": 8,
             "name": "I send a GET request to \"/api/books/1\" for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:28"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 103641823
+              "duration": 76896034
             }
           },
           {
@@ -2017,11 +2003,11 @@
             "line": 9,
             "name": "the response status code should be 200 for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:49"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 321474
+              "duration": 162294
             }
           },
           {
@@ -2030,11 +2016,11 @@
             "line": 10,
             "name": "the response should contain the correct book details for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:53"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:45"
             },
             "result": {
               "status": "passed",
-              "duration": 1258312
+              "duration": 1200552
             }
           },
           {
@@ -2042,7 +2028,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 748359
+              "duration": 562344
             }
           },
           {
@@ -2050,7 +2036,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 453563
+              "duration": 392320
             }
           },
           {
@@ -2058,7 +2044,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 45497
+              "duration": 303356
             }
           },
           {
@@ -2066,7 +2052,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 509767
+              "duration": 281587
             }
           }
         ],
@@ -2085,7 +2071,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1001933
+              "duration": 482528
             }
           },
           {
@@ -2094,11 +2080,11 @@
             "line": 13,
             "name": "I am authenticated as \"admin\" for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:20"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 179607
+              "duration": 69684
             }
           },
           {
@@ -2107,11 +2093,11 @@
             "line": 14,
             "name": "I send a GET request to \"/api/books/99999\" for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:28"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 97251836
+              "duration": 73718272
             }
           },
           {
@@ -2120,11 +2106,11 @@
             "line": 15,
             "name": "the response status code should be 404 for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:49"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 123964
+              "duration": 97440
             }
           },
           {
@@ -2132,7 +2118,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 500821
+              "duration": 615987
             }
           },
           {
@@ -2140,7 +2126,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 349867
+              "duration": 381690
             }
           },
           {
@@ -2148,7 +2134,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32918
+              "duration": 284514
             }
           },
           {
@@ -2156,7 +2142,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 338126
+              "duration": 297626
             }
           }
         ],
@@ -2175,7 +2161,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 499107
+              "duration": 477945
             }
           },
           {
@@ -2184,11 +2170,11 @@
             "line": 18,
             "name": "I am not authenticated for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:24"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:16"
             },
             "result": {
               "status": "passed",
-              "duration": 75518
+              "duration": 102835
             }
           },
           {
@@ -2197,11 +2183,11 @@
             "line": 19,
             "name": "I send a GET request to \"/api/books/1\" without authentication for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:39"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 2845119
+              "duration": 2419906
             }
           },
           {
@@ -2210,11 +2196,11 @@
             "line": 20,
             "name": "the response status code should be 401 for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:49"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 119306
+              "duration": 103639
             }
           },
           {
@@ -2222,7 +2208,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 653543
+              "duration": 540801
             }
           },
           {
@@ -2230,7 +2216,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 363428
+              "duration": 324905
             }
           },
           {
@@ -2238,7 +2224,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 61149
+              "duration": 377279
             }
           },
           {
@@ -2246,7 +2232,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 361480
+              "duration": 416690
             }
           }
         ],
@@ -2265,7 +2251,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 515485
+              "duration": 662688
             }
           },
           {
@@ -2274,11 +2260,11 @@
             "line": 23,
             "name": "I am authenticated as \"user\" for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:20"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:12"
             },
             "result": {
               "status": "passed",
-              "duration": 112940
+              "duration": 78298
             }
           },
           {
@@ -2287,11 +2273,11 @@
             "line": 24,
             "name": "I send a GET request to \"/api/books/1\" for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:28"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:20"
             },
             "result": {
               "status": "passed",
-              "duration": 78236942
+              "duration": 76987999
             }
           },
           {
@@ -2300,12 +2286,12 @@
             "line": 25,
             "name": "the response status code should be 200 for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:49"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:41"
             },
             "result": {
               "status": "failed",
-              "duration": 163007,
-              "error_message": "AssertionError\n    + expected - actual\n\n    -403\n    +200\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getBookByID_Kosala.step.js:50:31)"
+              "duration": 165709,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -403\n    +200\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/getBookByID_Kosala.step.js:42:38)"
             }
           },
           {
@@ -2314,7 +2300,7 @@
             "line": 26,
             "name": "the response should contain the correct book details for getBookByID",
             "match": {
-              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:53"
+              "location": "src/api/step_definitions/getBookByID_Kosala.step.js:45"
             },
             "result": {
               "status": "skipped",
@@ -2326,7 +2312,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 458091
+              "duration": 475963
             }
           },
           {
@@ -2334,7 +2320,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 371355
+              "duration": 300762
             }
           },
           {
@@ -2342,7 +2328,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 42532
+              "duration": 274696
             }
           },
           {
@@ -2350,7 +2336,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 363837
+              "duration": 270700
             }
           }
         ],
@@ -2380,7 +2366,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 589140
+              "duration": 465048
             }
           },
           {
@@ -2389,11 +2375,11 @@
             "line": 4,
             "name": "I have an existing book",
             "match": {
-              "location": "src/api/step_definitions/updateBook_Hashini.step.js:9"
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 78616001
+              "duration": 74556743
             }
           },
           {
@@ -2402,11 +2388,11 @@
             "line": 5,
             "name": "I update the book with new valid data",
             "match": {
-              "location": "src/api/step_definitions/updateBook_Hashini.step.js:32"
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:33"
             },
             "result": {
               "status": "passed",
-              "duration": 85125808
+              "duration": 74511144
             }
           },
           {
@@ -2419,7 +2405,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 111732
+              "duration": 96559
             }
           },
           {
@@ -2427,7 +2413,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 513638
+              "duration": 513257
             }
           },
           {
@@ -2435,7 +2421,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 425309
+              "duration": 292740
             }
           },
           {
@@ -2443,7 +2429,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46591
+              "duration": 278384
             }
           },
           {
@@ -2451,7 +2437,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 438509
+              "duration": 285472
             }
           }
         ],
@@ -2470,7 +2456,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 515946
+              "duration": 706494
             }
           },
           {
@@ -2483,7 +2469,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 120159
+              "duration": 96760
             }
           },
           {
@@ -2496,7 +2482,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 77053483
+              "duration": 75092083
             }
           },
           {
@@ -2509,7 +2495,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 120538
+              "duration": 133225
             }
           },
           {
@@ -2517,7 +2503,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 496422
+              "duration": 696372
             }
           },
           {
@@ -2525,7 +2511,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 346909
+              "duration": 442755
             }
           },
           {
@@ -2533,7 +2519,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 32524
+              "duration": 449441
             }
           },
           {
@@ -2541,7 +2527,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 430623
+              "duration": 421716
             }
           }
         ],
@@ -2560,7 +2546,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 497760
+              "duration": 575205
             }
           },
           {
@@ -2569,11 +2555,11 @@
             "line": 14,
             "name": "I have an existing book",
             "match": {
-              "location": "src/api/step_definitions/updateBook_Hashini.step.js:9"
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 95262457
+              "duration": 73786612
             }
           },
           {
@@ -2582,11 +2568,11 @@
             "line": 15,
             "name": "I update the book without title",
             "match": {
-              "location": "src/api/step_definitions/updateBook_Hashini.step.js:76"
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:75"
             },
             "result": {
               "status": "passed",
-              "duration": 91892690
+              "duration": 73500723
             }
           },
           {
@@ -2599,7 +2585,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 168471,
+              "duration": 156790,
               "error_message": "AssertionError\n    + expected - actual\n\n    -208\n    +400\n\n    at World.<anonymous> (/home/wathsalya/Documents/SEM7/ITQA/ITQA_Group_22/Project/src/api/step_definitions/common.steps.js:5:37)"
             }
           },
@@ -2608,7 +2594,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 564013
+              "duration": 482497
             }
           },
           {
@@ -2616,7 +2602,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 371406
+              "duration": 303252
             }
           },
           {
@@ -2624,7 +2610,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 34983
+              "duration": 266833
             }
           },
           {
@@ -2632,7 +2618,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 307462
+              "duration": 271494
             }
           }
         ],
@@ -2651,7 +2637,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 540615
+              "duration": 578892
             }
           },
           {
@@ -2660,11 +2646,11 @@
             "line": 19,
             "name": "I have an existing book",
             "match": {
-              "location": "src/api/step_definitions/updateBook_Hashini.step.js:9"
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 82491045
+              "duration": 74180948
             }
           },
           {
@@ -2673,11 +2659,11 @@
             "line": 20,
             "name": "I update the book without author",
             "match": {
-              "location": "src/api/step_definitions/updateBook_Hashini.step.js:93"
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:91"
             },
             "result": {
               "status": "passed",
-              "duration": 83877173
+              "duration": 73780341
             }
           },
           {
@@ -2690,7 +2676,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 96205
+              "duration": 95012
             }
           },
           {
@@ -2698,7 +2684,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 964523
+              "duration": 928005
             }
           },
           {
@@ -2706,7 +2692,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 326468
+              "duration": 334595
             }
           },
           {
@@ -2714,7 +2700,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 38602
+              "duration": 303551
             }
           },
           {
@@ -2722,7 +2708,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 328480
+              "duration": 344510
             }
           }
         ],
@@ -2741,7 +2727,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 623653
+              "duration": 481382
             }
           },
           {
@@ -2750,11 +2736,11 @@
             "line": 24,
             "name": "I have an existing book",
             "match": {
-              "location": "src/api/step_definitions/updateBook_Hashini.step.js:9"
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:10"
             },
             "result": {
               "status": "passed",
-              "duration": 87401229
+              "duration": 80418814
             }
           },
           {
@@ -2763,11 +2749,11 @@
             "line": 25,
             "name": "I have invalid credentials",
             "match": {
-              "location": "src/api/step_definitions/updateBook_Hashini.step.js:110"
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:107"
             },
             "result": {
               "status": "passed",
-              "duration": 128936
+              "duration": 160691
             }
           },
           {
@@ -2776,11 +2762,11 @@
             "line": 26,
             "name": "I try to update the book",
             "match": {
-              "location": "src/api/step_definitions/updateBook_Hashini.step.js:117"
+              "location": "src/api/step_definitions/updateBook_Hashini.step.js:114"
             },
             "result": {
               "status": "passed",
-              "duration": 79149969
+              "duration": 77401945
             }
           },
           {
@@ -2793,7 +2779,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 94008
+              "duration": 138423
             }
           },
           {
@@ -2801,7 +2787,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 656834
+              "duration": 638403
             }
           },
           {
@@ -2809,7 +2795,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 494338
+              "duration": 315582
             }
           },
           {
@@ -2817,7 +2803,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 60512
+              "duration": 279054
             }
           },
           {
@@ -2825,7 +2811,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 453568
+              "duration": 264948
             }
           }
         ],

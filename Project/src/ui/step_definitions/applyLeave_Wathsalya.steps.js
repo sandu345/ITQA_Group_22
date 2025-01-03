@@ -61,9 +61,9 @@ Then('I should see the leave requests in the list or a message indicating there 
    const isNoRecordsMessageVisible = await noRecordsMessage.isVisible();
    const isRecordFoundMessageVisible = await recordFoundMessage.isVisible();
 
-   console.log('isLeaveRequestsVisible:', isLeaveRequestsVisible);
-   console.log('isNoRecordsMessageVisible:', isNoRecordsMessageVisible);
-   console.log('isRecordFoundMessageVisible:', isRecordFoundMessageVisible);
+   if (!isLeaveRequestsVisible && !isNoRecordsMessageVisible && !isRecordFoundMessageVisible) {
+      console.error('Failure: No leave requests or messages found.');
+   }
 
    expect(isLeaveRequestsVisible || isNoRecordsMessageVisible || isRecordFoundMessageVisible).toBeTruthy();
 });
