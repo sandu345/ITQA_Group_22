@@ -8,7 +8,7 @@ const {
    createAuthHeader,
    parseRequestBody,
    getCurrentDateTime
-} = require('./common');
+} = require('./consts');
 
 // Step definitions
 Given('the API endpoint is {string}', async function (endpoint) {

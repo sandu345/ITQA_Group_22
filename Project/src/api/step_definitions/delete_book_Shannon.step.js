@@ -1,6 +1,6 @@
 const { Given, When, Then, After } = require('@cucumber/cucumber');
 const { request, expect } = require('@playwright/test');
-const { BASE_URL, context, createAuthHeader } = require('../common');
+const { BASE_URL, context, createAuthHeader } = require('./consts');
 
 Given('I am an authorized user', async function () {
    context.apiContext = await request.newContext({

@@ -1,7 +1,7 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const axios = require('axios');
 const { expect } = require('chai');
-const { BASE_URL, context, createAuthHeader } = require('./common');
+const { BASE_URL, context, createAuthHeader } = require('./consts');
 
 let bookData;
 let headers;
