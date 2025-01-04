@@ -8,14 +8,17 @@ let browser;
 let page;
 
 Before(async function () {
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true }); // Set headless to true
     const context = await browser.newContext();
     page = await context.newPage();
     this.page = page;
 });
 
 After(async function () {
-    await browser.close();
+    if (browser) {
+        await browser.close();  // Ensure the browser is closed after each scenario
+        browser = null; // Reset the browser variable
+    }
 });
 
 Given('I am logged in as an admin user for applyLeave', async function () {

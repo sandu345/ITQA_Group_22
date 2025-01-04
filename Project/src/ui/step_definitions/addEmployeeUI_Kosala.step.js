@@ -1,4 +1,4 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
+const { Given, When, Then, Before, After } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
 const assert = require('assert');
 
@@ -16,10 +16,23 @@ const selectors = {
     successMessage: '.oxd-text.oxd-text--toast-message.oxd-toast-content-text'
 };
 
-Given('I open the login page for add employee', { timeout: 30000 }, async () => {
-    browser = await chromium.launch({ headless: false });
+Before(async function () {
+    browser = await chromium.launch({ headless: true }); // Set headless to true
     const context = await browser.newContext();
     page = await context.newPage();
+    this.page = page;
+});
+
+After(async function () {
+    if (browser) {
+        await browser.close();  // Ensure the browser is closed after each scenario
+        browser = null; // Reset the browser variable
+    }
+});
+
+Given('I open the login page for add employee', { timeout: 30000 }, async () => {
+    await browser.newContext();
+    page = await browser.newPage();
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', {
         waitUntil: 'domcontentloaded'
     });
@@ -61,5 +74,4 @@ Then('the employee should be successfully added', { timeout: 30000 }, async () =
     await page.waitForSelector(selectors.successMessage);
     const successMessage = await page.isVisible(selectors.successMessage);
     assert.strictEqual(successMessage, true, 'Success message not visible after saving employee');
-    await browser.close();
 });

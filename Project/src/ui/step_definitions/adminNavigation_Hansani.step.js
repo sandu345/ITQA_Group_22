@@ -1,14 +1,27 @@
-const { Given, When, Then } = require('@cucumber/cucumber');
+const { Given, When, Then, Before, After } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
 const assert = require('assert');
 
 let browser;
 let page;
 
-Given('I open the login page for admin navigation', { timeout: 30000 }, async () => {
-    browser = await chromium.launch({ headless: false });
+Before(async function () {
+    browser = await chromium.launch({ headless: true }); // Set headless to true
     const context = await browser.newContext();
     page = await context.newPage();
+    this.page = page;
+});
+
+After(async function () {
+    if (browser) {
+        await browser.close();  // Ensure the browser is closed after each scenario
+        browser = null; // Reset the browser variable
+    }
+});
+
+Given('I open the login page for admin navigation', { timeout: 30000 }, async () => {
+    await browser.newContext();
+    page = await browser.newPage();
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', { waitUntil: 'domcontentloaded' });
     await page.waitForSelector('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input');
 });
@@ -59,5 +72,4 @@ Then('I should be redirected to login page for admin navigation', async () => {
     await page.waitForURL('**/auth/login');
     const loginFormVisible = await page.isVisible('form');
     assert.strictEqual(loginFormVisible, true, 'Login form should be visible');
-    await browser.close();
 });

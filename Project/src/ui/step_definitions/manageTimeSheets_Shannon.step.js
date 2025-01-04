@@ -18,7 +18,7 @@ const selectors = {
 };
 
 Given('I open the login page for timesheet management', { timeout: 30000 }, async () => {
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true }); // Set headless to true
     const context = await browser.newContext();
     page = await context.newPage();
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', {

@@ -19,7 +19,7 @@ class CustomWorld {
 setWorldConstructor(CustomWorld);
 
 Before(async function () {
-   this.browser = await chromium.launch({ headless: false }); // Set headless to false
+   this.browser = await chromium.launch({ headless: true }); // Set headless to true
    this.context = await this.browser.newContext();
    this.page = await this.context.newPage();
 });
@@ -27,6 +27,7 @@ Before(async function () {
 After(async function () {
    if (this.browser) {
       await this.browser.close();
+      this.browser = null; // Reset the browser variable
    }
 });
 
