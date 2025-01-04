@@ -1,7 +1,6 @@
 const { Given, When, Then, After } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
 const assert = require('assert');
-const { urls, credentials, selectors } = require('./consts');
 
 let browser;
 let page;
@@ -10,34 +9,34 @@ Given('I open the login page', { timeout: 30000 }, async () => {
     browser = await chromium.launch({ headless: false });
     const context = await browser.newContext();
     page = await context.newPage();
-    await page.goto(urls.login, { waitUntil: 'networkidle' });
-    await page.waitForSelector(selectors.usernameInput);
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', { waitUntil: 'networkidle' });
+    await page.waitForSelector('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input');
 });
 
 Given('I open the login page for reset fields', { timeout: 30000 }, async () => {
     browser = await chromium.launch({ headless: false });
     const context = await browser.newContext();
     page = await context.newPage();
-    await page.goto(urls.login, { waitUntil: 'networkidle' });
-    await page.waitForSelector(selectors.usernameInput);
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', { waitUntil: 'networkidle' });
+    await page.waitForSelector('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input');
 });
 
 When('I enter username {string} and password {string}', async (username, password) => {
-    await page.fill(selectors.usernameInput, username);
-    await page.fill(selectors.passwordInput, password);
+    await page.fill('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input', username);
+    await page.fill('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input', password);
 });
 
 When('I enter username {string} and password {string} for reset fields', async (username, password) => {
-    await page.fill(selectors.usernameInput, username);
-    await page.fill(selectors.passwordInput, password);
+    await page.fill('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input', username);
+    await page.fill('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input', password);
 });
 
 When('I click the login button', async () => {
-    await page.click(selectors.loginButton);
+    await page.click('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button');
 });
 
 When('I click the login button for reset fields', async () => {
-    await page.click(selectors.loginButton);
+    await page.click('xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button');
 });
 
 Then('I should be redirected to the dashboard', async () => {
@@ -53,38 +52,38 @@ Then('I should be redirected to the dashboard for reset fields', async () => {
 });
 
 When('I navigate to PIM page', async () => {
-    await page.click(selectors.pimPage);
-    await page.waitForURL(urls.pim);
+    await page.click('xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a');
+    await page.waitForURL('https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList');
     await page.waitForLoadState('networkidle');
 });
 
 When('I navigate to PIM page for reset fields', async () => {
-    await page.click(selectors.pimPage);
-    await page.waitForURL(urls.pim);
+    await page.click('xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a');
+    await page.waitForURL('https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList');
     await page.waitForLoadState('networkidle');
 });
 
 When('I select Full-Time Permanent from employment status', async () => {
-    await page.waitForSelector(selectors.employmentStatus, { state: 'visible', timeout: 10000 });
-    await page.click(selectors.employmentStatus);
-    await page.click(selectors.fullTimePermanent, { timeout: 10000 });
+    await page.waitForSelector('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/div[1]', { state: 'visible', timeout: 10000 });
+    await page.click('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/div[1]');
+    await page.click('text=Full-Time Permanent', { timeout: 10000 });
     await page.waitForTimeout(1000);
 });
 
 When('I select Full-Time Permanent from employment status for reset fields', async () => {
-    await page.waitForSelector(selectors.employmentStatus, { state: 'visible', timeout: 10000 });
-    await page.click(selectors.employmentStatus);
-    await page.click(selectors.fullTimePermanent, { timeout: 10000 });
+    await page.waitForSelector('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/div[1]', { state: 'visible', timeout: 10000 });
+    await page.click('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div/div[1]');
+    await page.click('text=Full-Time Permanent', { timeout: 10000 });
     await page.waitForTimeout(1000);
 });
 
 When('I click the search button', async () => {
-    await page.click(selectors.searchButton);
+    await page.click('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]');
     await page.waitForLoadState('networkidle');
 });
 
 When('I click the PIM search button for reset fields', async () => {
-    await page.click(selectors.searchButton);
+    await page.click('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[2]');
     await page.waitForLoadState('networkidle');
 });
 
@@ -101,7 +100,7 @@ Then('I should see the filtered results for Full-Time Permanent employees for re
 });
 
 When('I enter employee name {string}', async (name) => {
-    const nameInputSelector = selectors.employeeNameInput;
+    const nameInputSelector = 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input';
 
     // Wait for the input field to be visible and enabled before interacting
     await page.waitForSelector(nameInputSelector, { visible: true, timeout: 15000 });
@@ -113,7 +112,7 @@ When('I enter employee name {string}', async (name) => {
 });
 
 When('I enter employee name {string} for reset fields', async (name) => {
-    const nameInputSelector = selectors.employeeNameInput;
+    const nameInputSelector = 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input';
 
     // Wait for the input field to be visible and enabled before interacting
     await page.waitForSelector(nameInputSelector, { visible: true, timeout: 15000 });
@@ -125,7 +124,7 @@ When('I enter employee name {string} for reset fields', async (name) => {
 });
 
 When('I enter employee ID {string}', async (id) => {
-    const idInputSelector = selectors.employeeIdInput;
+    const idInputSelector = 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/input';
 
     // Wait for the input field to be visible and enabled before interacting
     await page.waitForSelector(idInputSelector, { visible: true, timeout: 15000 });
@@ -137,7 +136,7 @@ When('I enter employee ID {string}', async (id) => {
 });
 
 When('I enter employee ID {string} for reset fields', async (id) => {
-    const idInputSelector = selectors.employeeIdInput;
+    const idInputSelector = 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/input';
 
     // Wait for the input field to be visible and enabled before interacting
     await page.waitForSelector(idInputSelector, { visible: true, timeout: 15000 });
@@ -161,7 +160,7 @@ Then('I should see the search results for reset fields', async () => {
 });
 
 When('I click the reset button', async () => {
-    const resetButtonSelector = selectors.resetButton;
+    const resetButtonSelector = 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[1]';
 
     // Wait for the reset button to be visible and enabled before clicking
     await page.waitForSelector(resetButtonSelector, { visible: true, timeout: 15000 });
@@ -172,7 +171,7 @@ When('I click the reset button', async () => {
 });
 
 When('I click the reset button for reset fields', async () => {
-    const resetButtonSelector = selectors.resetButton;
+    const resetButtonSelector = 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/button[1]';
 
     // Wait for the reset button to be visible and enabled before clicking
     await page.waitForSelector(resetButtonSelector, { visible: true, timeout: 15000 });
@@ -184,16 +183,16 @@ When('I click the reset button for reset fields', async () => {
 
 Then('the search fields should be cleared', async () => {
     // Verify the fields are cleared
-    const nameValue = await page.inputValue(selectors.employeeNameInput);
-    const idValue = await page.inputValue(selectors.employeeIdInput);
+    const nameValue = await page.inputValue('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input');
+    const idValue = await page.inputValue('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/input');
     assert.strictEqual(nameValue, '', 'Name field is not cleared');
     assert.strictEqual(idValue, '', 'ID field is not cleared');
 });
 
 Then('the search fields should be cleared for reset fields', async () => {
     // Verify the fields are cleared
-    const nameValue = await page.inputValue(selectors.employeeNameInput);
-    const idValue = await page.inputValue(selectors.employeeIdInput);
+    const nameValue = await page.inputValue('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[1]/div/div[2]/div/div/input');
+    const idValue = await page.inputValue('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[2]/div/div[2]/input');
     assert.strictEqual(nameValue, '', 'Name field is not cleared');
     assert.strictEqual(idValue, '', 'ID field is not cleared');
 });

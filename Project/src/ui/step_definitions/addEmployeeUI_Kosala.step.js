@@ -1,16 +1,28 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const { chromium } = require('playwright');
 const assert = require('assert');
-const { urls, credentials, selectors } = require('./consts');
 
 let browser;
 let page;
+
+// Selectors object for better maintenance
+const selectors = {
+    usernameInput: 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input',
+    passwordInput: 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input',
+    loginButton: 'xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button',
+    pimModule: 'xpath=//*[@id="app"]/div[1]/div[1]/aside/nav/div[2]/ul/li[2]/a',
+    addEmployeeForm: 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div[2]',
+    saveButton: 'xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]',
+    successMessage: '.oxd-text.oxd-text--toast-message.oxd-toast-content-text'
+};
 
 Given('I open the login page for add employee', { timeout: 30000 }, async () => {
     browser = await chromium.launch({ headless: false });
     const context = await browser.newContext();
     page = await context.newPage();
-    await page.goto(urls.login, { waitUntil: 'domcontentloaded' });
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', {
+        waitUntil: 'domcontentloaded'
+    });
     await page.waitForSelector(selectors.usernameInput);
 });
 
@@ -26,13 +38,13 @@ When('I click the login button for add employee', async () => {
 
 When('I navigate to PIM module', async () => {
     await page.click(selectors.pimModule);
-    await page.waitForURL(urls.pim);
+    await page.waitForURL('https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList');
     await page.waitForLoadState('networkidle');
 });
 
 When('I click on Add Employee', async () => {
-    await page.click(selectors.addEmployeeButton);
-    await page.waitForURL(urls.addEmployee);
+    await page.click('xpath=//*[@id="app"]/div[1]/div[2]/div[2]/div/div[2]/div[1]/button');
+    await page.waitForURL('https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee');
 });
 
 When('I fill in the required employee details', async () => {
