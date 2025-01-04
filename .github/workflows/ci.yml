@@ -87,3 +87,7 @@ jobs:
         with:
           name: api-cucumber-report-html
           path: Project/reports/api-cucumber-report.html
+
+      - name: Display instructions to open the report
+        run: |
+          echo "To view the test reports, download the HTML files from the 'Artifacts' section of the GitHub Actions run summary and open them in your browser."

@@ -67,6 +67,7 @@ When('I fill in the required employee details', async () => {
 });
 
 When('I click the save button for add employee', { timeout: 60000 }, async () => { // Increase timeout to 60 seconds
+    await page.waitForSelector(selectors.saveButton, { state: 'visible', timeout: 60000 });
     await page.click(selectors.saveButton);
 });
 
