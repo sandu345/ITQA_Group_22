@@ -66,7 +66,7 @@ When('I fill in the required employee details', async () => {
     await page.fill('input[name="lastName"]', 'Doe');
 });
 
-When('I click the save button for add employee', async () => {
+When('I click the save button for add employee', { timeout: 60000 }, async () => { // Increase timeout to 60 seconds
     await page.click(selectors.saveButton);
 });
 

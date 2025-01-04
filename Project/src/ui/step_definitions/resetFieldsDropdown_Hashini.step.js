@@ -6,7 +6,7 @@ let browser;
 let page;
 
 Given('I open the login page', { timeout: 30000 }, async () => {
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true }); // Set headless to true
     const context = await browser.newContext();
     page = await context.newPage();
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', { waitUntil: 'networkidle' });
@@ -14,7 +14,7 @@ Given('I open the login page', { timeout: 30000 }, async () => {
 });
 
 Given('I open the login page for reset fields', { timeout: 30000 }, async () => {
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true }); // Set headless to true
     const context = await browser.newContext();
     page = await context.newPage();
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', { waitUntil: 'networkidle' });
