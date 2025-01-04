@@ -60,6 +60,10 @@ jobs:
         working-directory: ./Project
         continue-on-error: true
 
+      - name: Install cucumber-html-reporter
+        run: npm install cucumber-html-reporter --save-dev
+        working-directory: ./Project
+
       - name: Generate UI HTML report
         run: npm run generate-ui-html-report
         working-directory: ./Project
